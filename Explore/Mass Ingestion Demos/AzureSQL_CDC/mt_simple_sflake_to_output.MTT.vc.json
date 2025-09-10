@@ -132,7 +132,7 @@
     }
   ],
   "verbose" : false,
-  "lastRunTime" : 1757369003000,
+  "lastRunTime" : 1757474674000,
   "mappingId" : "@9dq8tIo8BqGdvEwrbjsjaB",
   "mappingTemplateName" : "m_simple_sflake_source_target",
   "hidden" : false,
@@ -146,5 +146,5 @@
   "allowMaxFieldLength" : false,
   "specialCharacterSupport" : false,
   "midstreamPreview" : false,
-  "vcsExportTime" : "2025-09-09 17:10:59 PDT"
+  "vcsExportTime" : "2025-09-10 12:44:53 PDT"
 }

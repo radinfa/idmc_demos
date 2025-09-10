@@ -1,15 +1,15 @@
 {
   "objectInfo" : {
-    "id" : "2yreGiRY6EVbC3Yh4nwwuC",
-    "name" : "m_cdi_pdo_rad2",
-    "type" : "EcosystemDTemplate",
+    "id" : "8PkhXCscavgg9xJG2pnuWv",
+    "name" : "m_read_customers_from_s3",
+    "type" : "DTEMPLATE",
     "metadata" : {
       "modelVersion" : {
         "major" : 0,
         "minor" : 0
       },
       "repoInfo" : {
-        "repoHandle" : "010VEL1700000000001B"
+        "repoHandle" : "010VEL1700000000001H"
       },
       "contextAttributes" : [ {
         "name" : "id",
@@ -23,10 +23,10 @@
     }
   },
   "dataFileExtension" : "zip",
-  "updateTime" : "2025-09-10T19:44:54.661Z",
+  "updateTime" : "2025-09-10T19:44:54.662Z",
   "objectRefs" : [ {
-    "id" : "8RvqGoHyhvniQWk7Wazgkc",
-    "name" : "Snowflake_retail_cpg",
+    "id" : "8dOsA93lMsdcOesNavcjyc",
+    "name" : "S3_Staging",
     "type" : "Connection",
     "metadata" : {
       "modelVersion" : {
@@ -34,7 +34,27 @@
         "minor" : 0
       },
       "repoInfo" : {
-        "repoHandle" : "010VEL0B00000000000U"
+        "repoHandle" : "010VEL0B000000000002"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "My S3 storage for file processing",
+        "contentType" : "JSON",
+        "documentState" : "COMPLETE"
+      }
+    },
+    "path" : "/SYS"
+  }, {
+    "id" : "fK7dS9WxpwifwaD1lHmxi0",
+    "name" : "AzureSQL for CDI",
+    "type" : "Connection",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "010VEL0B00000000000F"
       },
       "contextAttributes" : null,
       "additionalInfo" : {

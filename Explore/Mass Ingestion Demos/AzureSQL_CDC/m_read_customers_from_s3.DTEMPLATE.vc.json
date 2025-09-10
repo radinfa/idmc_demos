@@ -3,7 +3,7 @@
     "allowMaxFieldLength" : "false",
     "bigIntConvertType" : "ONLY_BIGINT",
     "documentType" : "MAPPING",
-    "name" : "m_simple_sflake_source_target",
+    "name" : "m_read_customers_from_s3",
     "specialCharacterSupport" : "false",
     "links" : [
       {
@@ -12,7 +12,7 @@
     ],
     "transformations" : [
       {
-        "createTime" : "2025-09-08T15:09:04.643Z",
+        "createTime" : "2025-09-10T03:18:15.612Z",
         "name" : "Source",
         "advancedProperties" : [
           {
@@ -37,426 +37,90 @@
         "fields" : [
           {
             "adapterField" : {
-              "name" : "CUSTOMERID"
+              "name" : "CustomerID"
             },
-            "name" : "CUSTOMERID",
+            "name" : "CustomerID",
             "platformType" : {
               "name" : "string"
             },
-            "precision" : 2048,
+            "precision" : 256,
             "scale" : 0
           },
           {
             "adapterField" : {
-              "name" : "FIRSTNAME"
+              "name" : "FirstName"
             },
-            "name" : "FIRSTNAME",
+            "name" : "FirstName",
             "platformType" : {
               "name" : "string"
             },
-            "precision" : 2048,
+            "precision" : 256,
             "scale" : 0
           },
           {
             "adapterField" : {
-              "name" : "LASTNAME"
+              "name" : "LastName"
             },
-            "name" : "LASTNAME",
+            "name" : "LastName",
             "platformType" : {
               "name" : "string"
             },
-            "precision" : 2048,
+            "precision" : 256,
             "scale" : 0
           },
           {
             "adapterField" : {
-              "name" : "EMAIL"
+              "name" : "Email"
             },
-            "name" : "EMAIL",
+            "name" : "Email",
             "platformType" : {
               "name" : "string"
             },
-            "precision" : 2048,
+            "precision" : 256,
             "scale" : 0
           },
           {
             "adapterField" : {
-              "name" : "CUSTADDRESS"
+              "name" : "CustAddress"
             },
-            "name" : "CUSTADDRESS",
+            "name" : "CustAddress",
             "platformType" : {
               "name" : "string"
             },
-            "precision" : 2048,
+            "precision" : 256,
             "scale" : 0
           },
           {
             "adapterField" : {
-              "name" : "CUSTCITY"
+              "name" : "CustCity"
             },
-            "name" : "CUSTCITY",
+            "name" : "CustCity",
             "platformType" : {
               "name" : "string"
             },
-            "precision" : 2048,
+            "precision" : 256,
             "scale" : 0
           },
           {
             "adapterField" : {
-              "name" : "CUSTZIP"
+              "name" : "CustZip"
             },
-            "name" : "CUSTZIP",
+            "name" : "CustZip",
             "platformType" : {
               "name" : "string"
             },
-            "precision" : 2048,
+            "precision" : 256,
             "scale" : 0
           },
           {
             "adapterField" : {
-              "name" : "CUSTCOUNTRY"
+              "name" : "CustCountry"
             },
-            "name" : "CUSTCOUNTRY",
+            "name" : "CustCountry",
             "platformType" : {
               "name" : "string"
             },
-            "precision" : 2048,
-            "scale" : 0
-          }
-        ],
-        "dataAdapter" : {
-          "connectionId" : "saas:@aBFly3DJh5ecR0zoC5UraR",
-          "connectionName" : "RETAIL_CPG_Snowflake",
-          "excludeDynamicFileNameField" : "false",
-          "objectType" : "SINGLE",
-          "typeSystem" : "TOOLKIT",
-          "useDynamicFileName" : "false",
-          "object" : {
-            "name" : "RETAIL_CPG/PUBLIC/RAD_Customers",
-            "label" : "RETAIL_CPG/PUBLIC/RAD_Customers",
-            "objectName" : "RAD_Customers",
-            "objectType" : "table",
-            "path" : "RETAIL_CPG/PUBLIC/RAD_Customers",
-            "retainMetadata" : "false",
-            "fields" : [
-              {
-                "name" : "CUSTOMERID",
-                "fieldType" : "CONNECTOR",
-                "label" : "CUSTOMERID",
-                "nativeName" : "CUSTOMERID",
-                "nativeType" : "varchar",
-                "original" : "false",
-                "precision" : 2048,
-                "scale" : 0,
-                "metaExtensions" : [
-                  {
-                    "name" : "isNullable",
-                    "value" : "true"
-                  }
-                ],
-                "properties" : [
-                  {
-                    "name" : "parentObject",
-                    "value" : "RAD_Customers"
-                  }
-                ]
-              },
-              {
-                "name" : "FIRSTNAME",
-                "fieldType" : "CONNECTOR",
-                "label" : "FIRSTNAME",
-                "nativeName" : "FIRSTNAME",
-                "nativeType" : "varchar",
-                "original" : "false",
-                "precision" : 2048,
-                "scale" : 0,
-                "metaExtensions" : [
-                  {
-                    "name" : "isNullable",
-                    "value" : "true"
-                  }
-                ],
-                "properties" : [
-                  {
-                    "name" : "parentObject",
-                    "value" : "RAD_Customers"
-                  }
-                ]
-              },
-              {
-                "name" : "LASTNAME",
-                "fieldType" : "CONNECTOR",
-                "label" : "LASTNAME",
-                "nativeName" : "LASTNAME",
-                "nativeType" : "varchar",
-                "original" : "false",
-                "precision" : 2048,
-                "scale" : 0,
-                "metaExtensions" : [
-                  {
-                    "name" : "isNullable",
-                    "value" : "true"
-                  }
-                ],
-                "properties" : [
-                  {
-                    "name" : "parentObject",
-                    "value" : "RAD_Customers"
-                  }
-                ]
-              },
-              {
-                "name" : "EMAIL",
-                "fieldType" : "CONNECTOR",
-                "label" : "EMAIL",
-                "nativeName" : "EMAIL",
-                "nativeType" : "varchar",
-                "original" : "false",
-                "precision" : 2048,
-                "scale" : 0,
-                "metaExtensions" : [
-                  {
-                    "name" : "isNullable",
-                    "value" : "true"
-                  }
-                ],
-                "properties" : [
-                  {
-                    "name" : "parentObject",
-                    "value" : "RAD_Customers"
-                  }
-                ]
-              },
-              {
-                "name" : "CUSTADDRESS",
-                "fieldType" : "CONNECTOR",
-                "label" : "CUSTADDRESS",
-                "nativeName" : "CUSTADDRESS",
-                "nativeType" : "varchar",
-                "original" : "false",
-                "precision" : 2048,
-                "scale" : 0,
-                "metaExtensions" : [
-                  {
-                    "name" : "isNullable",
-                    "value" : "true"
-                  }
-                ],
-                "properties" : [
-                  {
-                    "name" : "parentObject",
-                    "value" : "RAD_Customers"
-                  }
-                ]
-              },
-              {
-                "name" : "CUSTCITY",
-                "fieldType" : "CONNECTOR",
-                "label" : "CUSTCITY",
-                "nativeName" : "CUSTCITY",
-                "nativeType" : "varchar",
-                "original" : "false",
-                "precision" : 2048,
-                "scale" : 0,
-                "metaExtensions" : [
-                  {
-                    "name" : "isNullable",
-                    "value" : "true"
-                  }
-                ],
-                "properties" : [
-                  {
-                    "name" : "parentObject",
-                    "value" : "RAD_Customers"
-                  }
-                ]
-              },
-              {
-                "name" : "CUSTZIP",
-                "fieldType" : "CONNECTOR",
-                "label" : "CUSTZIP",
-                "nativeName" : "CUSTZIP",
-                "nativeType" : "varchar",
-                "original" : "false",
-                "precision" : 2048,
-                "scale" : 0,
-                "metaExtensions" : [
-                  {
-                    "name" : "isNullable",
-                    "value" : "true"
-                  }
-                ],
-                "properties" : [
-                  {
-                    "name" : "parentObject",
-                    "value" : "RAD_Customers"
-                  }
-                ]
-              },
-              {
-                "name" : "CUSTCOUNTRY",
-                "fieldType" : "CONNECTOR",
-                "label" : "CUSTCOUNTRY",
-                "nativeName" : "CUSTCOUNTRY",
-                "nativeType" : "varchar",
-                "original" : "false",
-                "precision" : 2048,
-                "scale" : 0,
-                "metaExtensions" : [
-                  {
-                    "name" : "isNullable",
-                    "value" : "true"
-                  }
-                ],
-                "properties" : [
-                  {
-                    "name" : "parentObject",
-                    "value" : "RAD_Customers"
-                  }
-                ]
-              }
-            ],
-            "objectAttributes" : [
-              {
-                "name" : "tableType",
-                "value" : "TABLE"
-              },
-              {
-                "name" : "storageSerPol",
-                "value" : "Optimized"
-              },
-              {
-                "name" : "tableFormat",
-                "value" : "Standard Table"
-              }
-            ]
-          },
-          "readOptions" : {
-            "commandType" : 0,
-            "descending" : "false",
-            "queryAll" : "false",
-            "rowLimit" : 0,
-            "selectDistinct" : "false"
-          }
-        }
-      },
-      {
-        "createTime" : "2025-09-08T15:09:04.643Z",
-        "name" : "Target",
-        "advancedProperties" : [
-          {
-            "name" : "Forward Rejected Rows",
-            "value" : "true"
-          }
-        ],
-        "groups" : [
-          {
-            "input" : "true",
-            "name" : "DefaultGroup",
-            "output" : "false",
-            "rules" : [
-              {
-                "bulkRename" : "false",
-                "include" : "true"
-              }
-            ]
-          }
-        ],
-        "createTarget" : "true",
-        "fieldMappingMode" : "BY_NAME",
-        "inputSorted" : "false",
-        "schemaProviderType" : "SELECTED_OBJECT",
-        "targetFieldsOrdered" : "false",
-        "updateColumns" : null,
-        "useLabels" : "false",
-        "useSequenceFields" : "false",
-        "fields" : [
-          {
-            "adapterField" : {
-              "name" : "CUSTOMERID"
-            },
-            "name" : "CUSTOMERID",
-            "platformType" : {
-              "name" : "string"
-            },
-            "precision" : 2048,
-            "scale" : 0
-          },
-          {
-            "adapterField" : {
-              "name" : "FIRSTNAME"
-            },
-            "name" : "FIRSTNAME",
-            "platformType" : {
-              "name" : "string"
-            },
-            "precision" : 2048,
-            "scale" : 0
-          },
-          {
-            "adapterField" : {
-              "name" : "LASTNAME"
-            },
-            "name" : "LASTNAME",
-            "platformType" : {
-              "name" : "string"
-            },
-            "precision" : 2048,
-            "scale" : 0
-          },
-          {
-            "adapterField" : {
-              "name" : "EMAIL"
-            },
-            "name" : "EMAIL",
-            "platformType" : {
-              "name" : "string"
-            },
-            "precision" : 2048,
-            "scale" : 0
-          },
-          {
-            "adapterField" : {
-              "name" : "CUSTADDRESS"
-            },
-            "name" : "CUSTADDRESS",
-            "platformType" : {
-              "name" : "string"
-            },
-            "precision" : 2048,
-            "scale" : 0
-          },
-          {
-            "adapterField" : {
-              "name" : "CUSTCITY"
-            },
-            "name" : "CUSTCITY",
-            "platformType" : {
-              "name" : "string"
-            },
-            "precision" : 2048,
-            "scale" : 0
-          },
-          {
-            "adapterField" : {
-              "name" : "CUSTZIP"
-            },
-            "name" : "CUSTZIP",
-            "platformType" : {
-              "name" : "string"
-            },
-            "precision" : 2048,
-            "scale" : 0
-          },
-          {
-            "adapterField" : {
-              "name" : "CUSTCOUNTRY"
-            },
-            "name" : "CUSTCOUNTRY",
-            "platformType" : {
-              "name" : "string"
-            },
-            "precision" : 2048,
+            "precision" : 256,
             "scale" : 0
           }
         ],
@@ -526,192 +190,414 @@
             ]
           },
           "object" : {
-            "name" : "sandbox-tech-sales/rdodson//Test Data/cdc_customers.csv",
-            "label" : "sandbox-tech-sales/rdodson//Test Data/cdc_customers.csv",
-            "path" : "sandbox-tech-sales/rdodson//Test Data/cdc_customers.csv",
+            "name" : "sandbox-tech-sales/rdodson%2F/Test Data%2F/customers.csv",
+            "label" : "sandbox-tech-sales/rdodson%2F/Test Data%2F/customers.csv",
+            "objectName" : "customers.csv",
+            "objectType" : "amazons3",
+            "path" : "sandbox-tech-sales/rdodson%2F/Test Data%2F/customers.csv",
+            "retainMetadata" : "false",
+            "fields" : [
+              {
+                "name" : "CustomerID",
+                "fieldType" : "PARSER",
+                "label" : "CustomerID",
+                "nativeName" : "CustomerID",
+                "nativeType" : "flat_string",
+                "original" : "false",
+                "precision" : 256,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "customers.csv"
+                  }
+                ]
+              },
+              {
+                "name" : "FirstName",
+                "fieldType" : "PARSER",
+                "label" : "FirstName",
+                "nativeName" : "FirstName",
+                "nativeType" : "flat_string",
+                "original" : "false",
+                "precision" : 256,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "customers.csv"
+                  }
+                ]
+              },
+              {
+                "name" : "LastName",
+                "fieldType" : "PARSER",
+                "label" : "LastName",
+                "nativeName" : "LastName",
+                "nativeType" : "flat_string",
+                "original" : "false",
+                "precision" : 256,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "customers.csv"
+                  }
+                ]
+              },
+              {
+                "name" : "Email",
+                "fieldType" : "PARSER",
+                "label" : "Email",
+                "nativeName" : "Email",
+                "nativeType" : "flat_string",
+                "original" : "false",
+                "precision" : 256,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "customers.csv"
+                  }
+                ]
+              },
+              {
+                "name" : "CustAddress",
+                "fieldType" : "PARSER",
+                "label" : "CustAddress",
+                "nativeName" : "CustAddress",
+                "nativeType" : "flat_string",
+                "original" : "false",
+                "precision" : 256,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "customers.csv"
+                  }
+                ]
+              },
+              {
+                "name" : "CustCity",
+                "fieldType" : "PARSER",
+                "label" : "CustCity",
+                "nativeName" : "CustCity",
+                "nativeType" : "flat_string",
+                "original" : "false",
+                "precision" : 256,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "customers.csv"
+                  }
+                ]
+              },
+              {
+                "name" : "CustZip",
+                "fieldType" : "PARSER",
+                "label" : "CustZip",
+                "nativeName" : "CustZip",
+                "nativeType" : "flat_string",
+                "original" : "false",
+                "precision" : 256,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "customers.csv"
+                  }
+                ]
+              },
+              {
+                "name" : "CustCountry",
+                "fieldType" : "PARSER",
+                "label" : "CustCountry",
+                "nativeName" : "CustCountry",
+                "nativeType" : "flat_string",
+                "original" : "false",
+                "precision" : 256,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "customers.csv"
+                  }
+                ]
+              }
+            ]
+          },
+          "readOptions" : {
+            "commandType" : 0,
+            "descending" : "false",
+            "queryAll" : "false",
+            "rowLimit" : 0,
+            "selectDistinct" : "false"
+          }
+        }
+      },
+      {
+        "createTime" : "2025-09-10T03:18:15.612Z",
+        "name" : "Target",
+        "advancedProperties" : [
+          {
+            "name" : "Forward Rejected Rows",
+            "value" : "true"
+          }
+        ],
+        "groups" : [
+          {
+            "input" : "true",
+            "name" : "DefaultGroup",
+            "output" : "false",
+            "rules" : [
+              {
+                "bulkRename" : "false",
+                "include" : "true"
+              }
+            ]
+          }
+        ],
+        "createTarget" : "false",
+        "fieldMappingMode" : "MANUAL",
+        "inputSorted" : "false",
+        "schemaProviderType" : "SELECTED_OBJECT",
+        "targetFieldsOrdered" : "false",
+        "updateColumns" : null,
+        "useLabels" : "false",
+        "useSequenceFields" : "false",
+        "fields" : [
+          {
+            "adapterField" : {
+              "name" : "CUSTOMERID"
+            },
+            "name" : "CUSTOMERID",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 512,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "FIRSTNAME"
+            },
+            "name" : "FIRSTNAME",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 512,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "LASTNAME"
+            },
+            "name" : "LASTNAME",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 512,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "EMAIL"
+            },
+            "name" : "EMAIL",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 512,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "CUSTADDRESS"
+            },
+            "name" : "CUSTADDRESS",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 512,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "CUSTCITY"
+            },
+            "name" : "CUSTCITY",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 512,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "CUSTZIP"
+            },
+            "name" : "CUSTZIP",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 512,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "CUSTCOUNTRY"
+            },
+            "name" : "CUSTCOUNTRY",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 512,
+            "scale" : 0
+          }
+        ],
+        "dataAdapter" : {
+          "connectionId" : "saas:@fK7dS9WxpwifwaD1lHmxi0",
+          "connectionName" : "AzureSQL for CDI",
+          "excludeDynamicFileNameField" : "false",
+          "objectType" : "SINGLE",
+          "typeSystem" : "SqlServer",
+          "useDynamicFileName" : "false",
+          "object" : {
+            "name" : "Sales/Customers",
+            "dbSchema" : "Sales",
+            "label" : "Customers",
+            "objectName" : "Customers",
+            "path" : "Sales/Customers",
             "retainMetadata" : "false",
             "fields" : [
               {
                 "name" : "CUSTOMERID",
-                "fieldType" : "PARSER",
+                "fieldType" : "CONNECTOR",
                 "label" : "CUSTOMERID",
                 "nativeName" : "CUSTOMERID",
-                "nativeType" : "flat_string",
+                "nativeType" : "nvarchar",
                 "original" : "false",
-                "precision" : 2048,
+                "precision" : 512,
                 "scale" : 0,
-                "metaExtensions" : [
-                  {
-                    "name" : "partitionOrder",
-                    "value" : "0"
-                  }
-                ],
                 "properties" : [
                   {
                     "name" : "parentObject",
-                    "value" : "cdc_customers.csv"
+                    "value" : "Sales/Customers"
                   }
                 ]
               },
               {
                 "name" : "FIRSTNAME",
-                "fieldType" : "PARSER",
+                "fieldType" : "CONNECTOR",
                 "label" : "FIRSTNAME",
                 "nativeName" : "FIRSTNAME",
-                "nativeType" : "flat_string",
+                "nativeType" : "nvarchar",
                 "original" : "false",
-                "precision" : 2048,
+                "precision" : 512,
                 "scale" : 0,
-                "metaExtensions" : [
-                  {
-                    "name" : "partitionOrder",
-                    "value" : "0"
-                  }
-                ],
                 "properties" : [
                   {
                     "name" : "parentObject",
-                    "value" : "cdc_customers.csv"
+                    "value" : "Sales/Customers"
                   }
                 ]
               },
               {
                 "name" : "LASTNAME",
-                "fieldType" : "PARSER",
+                "fieldType" : "CONNECTOR",
                 "label" : "LASTNAME",
                 "nativeName" : "LASTNAME",
-                "nativeType" : "flat_string",
+                "nativeType" : "nvarchar",
                 "original" : "false",
-                "precision" : 2048,
+                "precision" : 512,
                 "scale" : 0,
-                "metaExtensions" : [
-                  {
-                    "name" : "partitionOrder",
-                    "value" : "0"
-                  }
-                ],
                 "properties" : [
                   {
                     "name" : "parentObject",
-                    "value" : "cdc_customers.csv"
+                    "value" : "Sales/Customers"
                   }
                 ]
               },
               {
                 "name" : "EMAIL",
-                "fieldType" : "PARSER",
+                "fieldType" : "CONNECTOR",
                 "label" : "EMAIL",
                 "nativeName" : "EMAIL",
-                "nativeType" : "flat_string",
+                "nativeType" : "nvarchar",
                 "original" : "false",
-                "precision" : 2048,
+                "precision" : 512,
                 "scale" : 0,
-                "metaExtensions" : [
-                  {
-                    "name" : "partitionOrder",
-                    "value" : "0"
-                  }
-                ],
                 "properties" : [
                   {
                     "name" : "parentObject",
-                    "value" : "cdc_customers.csv"
+                    "value" : "Sales/Customers"
                   }
                 ]
               },
               {
                 "name" : "CUSTADDRESS",
-                "fieldType" : "PARSER",
+                "fieldType" : "CONNECTOR",
                 "label" : "CUSTADDRESS",
                 "nativeName" : "CUSTADDRESS",
-                "nativeType" : "flat_string",
+                "nativeType" : "nvarchar",
                 "original" : "false",
-                "precision" : 2048,
+                "precision" : 512,
                 "scale" : 0,
-                "metaExtensions" : [
-                  {
-                    "name" : "partitionOrder",
-                    "value" : "0"
-                  }
-                ],
                 "properties" : [
                   {
                     "name" : "parentObject",
-                    "value" : "cdc_customers.csv"
+                    "value" : "Sales/Customers"
                   }
                 ]
               },
               {
                 "name" : "CUSTCITY",
-                "fieldType" : "PARSER",
+                "fieldType" : "CONNECTOR",
                 "label" : "CUSTCITY",
                 "nativeName" : "CUSTCITY",
-                "nativeType" : "flat_string",
+                "nativeType" : "nvarchar",
                 "original" : "false",
-                "precision" : 2048,
+                "precision" : 512,
                 "scale" : 0,
-                "metaExtensions" : [
-                  {
-                    "name" : "partitionOrder",
-                    "value" : "0"
-                  }
-                ],
                 "properties" : [
                   {
                     "name" : "parentObject",
-                    "value" : "cdc_customers.csv"
+                    "value" : "Sales/Customers"
                   }
                 ]
               },
               {
                 "name" : "CUSTZIP",
-                "fieldType" : "PARSER",
+                "fieldType" : "CONNECTOR",
                 "label" : "CUSTZIP",
                 "nativeName" : "CUSTZIP",
-                "nativeType" : "flat_string",
+                "nativeType" : "nvarchar",
                 "original" : "false",
-                "precision" : 2048,
+                "precision" : 512,
                 "scale" : 0,
-                "metaExtensions" : [
-                  {
-                    "name" : "partitionOrder",
-                    "value" : "0"
-                  }
-                ],
                 "properties" : [
                   {
                     "name" : "parentObject",
-                    "value" : "cdc_customers.csv"
+                    "value" : "Sales/Customers"
                   }
                 ]
               },
               {
                 "name" : "CUSTCOUNTRY",
-                "fieldType" : "PARSER",
+                "fieldType" : "CONNECTOR",
                 "label" : "CUSTCOUNTRY",
                 "nativeName" : "CUSTCOUNTRY",
-                "nativeType" : "flat_string",
+                "nativeType" : "nvarchar",
                 "original" : "false",
-                "precision" : 2048,
+                "precision" : 512,
                 "scale" : 0,
-                "metaExtensions" : [
-                  {
-                    "name" : "partitionOrder",
-                    "value" : "0"
-                  }
-                ],
                 "properties" : [
                   {
                     "name" : "parentObject",
-                    "value" : "cdc_customers.csv"
+                    "value" : "Sales/Customers"
                   }
                 ]
-              }
-            ],
-            "objectAttributes" : [
-              {
-                "name" : "parent",
-                "value" : "sandbox-tech-sales/rdodson//Test Data"
               }
             ]
           },
@@ -727,14 +613,68 @@
             "truncate" : "false",
             "useErrorFile" : "false",
             "useExactSrcNames" : "false",
-            "useSuccessFile" : "false",
-            "tgtObjectAttributes" : [
-              {
-                "name" : "parent",
-                "value" : "sandbox-tech-sales/rdodson//Test Data"
-              }
-            ]
+            "useSuccessFile" : "false"
           }
+        },
+        "manualMappings" : {
+          "mappingList" : [
+            {
+              "fromFieldName" : "CustomerID",
+              "toField" : {
+                "name" : "CUSTOMERID"
+              },
+              "fromFieldNames" : null
+            },
+            {
+              "fromFieldName" : "FirstName",
+              "toField" : {
+                "name" : "FIRSTNAME"
+              },
+              "fromFieldNames" : null
+            },
+            {
+              "fromFieldName" : "LastName",
+              "toField" : {
+                "name" : "LASTNAME"
+              },
+              "fromFieldNames" : null
+            },
+            {
+              "fromFieldName" : "Email",
+              "toField" : {
+                "name" : "EMAIL"
+              },
+              "fromFieldNames" : null
+            },
+            {
+              "fromFieldName" : "CustAddress",
+              "toField" : {
+                "name" : "CUSTADDRESS"
+              },
+              "fromFieldNames" : null
+            },
+            {
+              "fromFieldName" : "CustCity",
+              "toField" : {
+                "name" : "CUSTCITY"
+              },
+              "fromFieldNames" : null
+            },
+            {
+              "fromFieldName" : "CustZip",
+              "toField" : {
+                "name" : "CUSTZIP"
+              },
+              "fromFieldNames" : null
+            },
+            {
+              "fromFieldName" : "CustCountry",
+              "toField" : {
+                "name" : "CUSTCOUNTRY"
+              },
+              "fromFieldNames" : null
+            }
+          ]
         }
       }
     ]
