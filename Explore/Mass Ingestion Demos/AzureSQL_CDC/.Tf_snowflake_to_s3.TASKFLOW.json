@@ -20,7 +20,7 @@
     }
   },
   "dataFileExtension" : "xml",
-  "updateTime" : "2025-09-10T00:10:59.727Z",
+  "updateTime" : "2025-09-10T14:41:13.137Z",
   "objectRefs" : [ {
     "id" : "lPcg4pxzeuxk5hkOYJR8SP",
     "name" : "Replicate_AzureSQL_to_Snowflake",
@@ -33,7 +33,7 @@
       "repoInfo" : {
         "repoHandle" : "4177"
       },
-      "contextAttributes" : [ ],
+      "contextAttributes" : null,
       "additionalInfo" : {
         "description" : "",
         "contentType" : "Binary",
@@ -53,10 +53,7 @@
       "repoInfo" : {
         "repoHandle" : "010VEL0Z00000000001F"
       },
-      "contextAttributes" : [ {
-        "name" : "id",
-        "value" : "@1"
-      } ],
+      "contextAttributes" : null,
       "additionalInfo" : {
         "description" : null,
         "contentType" : "JSON",
