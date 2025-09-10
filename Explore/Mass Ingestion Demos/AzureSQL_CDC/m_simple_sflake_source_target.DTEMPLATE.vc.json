@@ -1,0 +1,743 @@
+{
+  "content" : {
+    "allowMaxFieldLength" : "false",
+    "bigIntConvertType" : "ONLY_BIGINT",
+    "documentType" : "MAPPING",
+    "name" : "m_simple_sflake_source_target",
+    "specialCharacterSupport" : "false",
+    "links" : [
+      {
+        "link" : "Source -> Target"
+      }
+    ],
+    "transformations" : [
+      {
+        "createTime" : "2025-09-08T15:09:04.643Z",
+        "name" : "Source",
+        "advancedProperties" : [
+          {
+            "name" : "Tracing Level",
+            "value" : "Normal"
+          },
+          {
+            "name" : "Output is deterministic",
+            "value" : "false"
+          }
+        ],
+        "groups" : [
+          {
+            "input" : "false",
+            "name" : "DefaultGroup",
+            "output" : "true"
+          }
+        ],
+        "generateFilenamePort" : "false",
+        "useLabels" : "false",
+        "useSequenceFields" : "false",
+        "fields" : [
+          {
+            "adapterField" : {
+              "name" : "CUSTOMERID"
+            },
+            "name" : "CUSTOMERID",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 2048,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "FIRSTNAME"
+            },
+            "name" : "FIRSTNAME",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 2048,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "LASTNAME"
+            },
+            "name" : "LASTNAME",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 2048,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "EMAIL"
+            },
+            "name" : "EMAIL",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 2048,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "CUSTADDRESS"
+            },
+            "name" : "CUSTADDRESS",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 2048,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "CUSTCITY"
+            },
+            "name" : "CUSTCITY",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 2048,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "CUSTZIP"
+            },
+            "name" : "CUSTZIP",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 2048,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "CUSTCOUNTRY"
+            },
+            "name" : "CUSTCOUNTRY",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 2048,
+            "scale" : 0
+          }
+        ],
+        "dataAdapter" : {
+          "connectionId" : "saas:@aBFly3DJh5ecR0zoC5UraR",
+          "connectionName" : "RETAIL_CPG_Snowflake",
+          "excludeDynamicFileNameField" : "false",
+          "objectType" : "SINGLE",
+          "typeSystem" : "TOOLKIT",
+          "useDynamicFileName" : "false",
+          "object" : {
+            "name" : "RETAIL_CPG/PUBLIC/RAD_Customers",
+            "label" : "RETAIL_CPG/PUBLIC/RAD_Customers",
+            "objectName" : "RAD_Customers",
+            "objectType" : "table",
+            "path" : "RETAIL_CPG/PUBLIC/RAD_Customers",
+            "retainMetadata" : "false",
+            "fields" : [
+              {
+                "name" : "CUSTOMERID",
+                "fieldType" : "CONNECTOR",
+                "label" : "CUSTOMERID",
+                "nativeName" : "CUSTOMERID",
+                "nativeType" : "varchar",
+                "original" : "false",
+                "precision" : 2048,
+                "scale" : 0,
+                "metaExtensions" : [
+                  {
+                    "name" : "isNullable",
+                    "value" : "true"
+                  }
+                ],
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "RAD_Customers"
+                  }
+                ]
+              },
+              {
+                "name" : "FIRSTNAME",
+                "fieldType" : "CONNECTOR",
+                "label" : "FIRSTNAME",
+                "nativeName" : "FIRSTNAME",
+                "nativeType" : "varchar",
+                "original" : "false",
+                "precision" : 2048,
+                "scale" : 0,
+                "metaExtensions" : [
+                  {
+                    "name" : "isNullable",
+                    "value" : "true"
+                  }
+                ],
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "RAD_Customers"
+                  }
+                ]
+              },
+              {
+                "name" : "LASTNAME",
+                "fieldType" : "CONNECTOR",
+                "label" : "LASTNAME",
+                "nativeName" : "LASTNAME",
+                "nativeType" : "varchar",
+                "original" : "false",
+                "precision" : 2048,
+                "scale" : 0,
+                "metaExtensions" : [
+                  {
+                    "name" : "isNullable",
+                    "value" : "true"
+                  }
+                ],
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "RAD_Customers"
+                  }
+                ]
+              },
+              {
+                "name" : "EMAIL",
+                "fieldType" : "CONNECTOR",
+                "label" : "EMAIL",
+                "nativeName" : "EMAIL",
+                "nativeType" : "varchar",
+                "original" : "false",
+                "precision" : 2048,
+                "scale" : 0,
+                "metaExtensions" : [
+                  {
+                    "name" : "isNullable",
+                    "value" : "true"
+                  }
+                ],
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "RAD_Customers"
+                  }
+                ]
+              },
+              {
+                "name" : "CUSTADDRESS",
+                "fieldType" : "CONNECTOR",
+                "label" : "CUSTADDRESS",
+                "nativeName" : "CUSTADDRESS",
+                "nativeType" : "varchar",
+                "original" : "false",
+                "precision" : 2048,
+                "scale" : 0,
+                "metaExtensions" : [
+                  {
+                    "name" : "isNullable",
+                    "value" : "true"
+                  }
+                ],
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "RAD_Customers"
+                  }
+                ]
+              },
+              {
+                "name" : "CUSTCITY",
+                "fieldType" : "CONNECTOR",
+                "label" : "CUSTCITY",
+                "nativeName" : "CUSTCITY",
+                "nativeType" : "varchar",
+                "original" : "false",
+                "precision" : 2048,
+                "scale" : 0,
+                "metaExtensions" : [
+                  {
+                    "name" : "isNullable",
+                    "value" : "true"
+                  }
+                ],
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "RAD_Customers"
+                  }
+                ]
+              },
+              {
+                "name" : "CUSTZIP",
+                "fieldType" : "CONNECTOR",
+                "label" : "CUSTZIP",
+                "nativeName" : "CUSTZIP",
+                "nativeType" : "varchar",
+                "original" : "false",
+                "precision" : 2048,
+                "scale" : 0,
+                "metaExtensions" : [
+                  {
+                    "name" : "isNullable",
+                    "value" : "true"
+                  }
+                ],
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "RAD_Customers"
+                  }
+                ]
+              },
+              {
+                "name" : "CUSTCOUNTRY",
+                "fieldType" : "CONNECTOR",
+                "label" : "CUSTCOUNTRY",
+                "nativeName" : "CUSTCOUNTRY",
+                "nativeType" : "varchar",
+                "original" : "false",
+                "precision" : 2048,
+                "scale" : 0,
+                "metaExtensions" : [
+                  {
+                    "name" : "isNullable",
+                    "value" : "true"
+                  }
+                ],
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "RAD_Customers"
+                  }
+                ]
+              }
+            ],
+            "objectAttributes" : [
+              {
+                "name" : "tableType",
+                "value" : "TABLE"
+              },
+              {
+                "name" : "storageSerPol",
+                "value" : "Optimized"
+              },
+              {
+                "name" : "tableFormat",
+                "value" : "Standard Table"
+              }
+            ]
+          },
+          "readOptions" : {
+            "commandType" : 0,
+            "descending" : "false",
+            "queryAll" : "false",
+            "rowLimit" : 0,
+            "selectDistinct" : "false"
+          }
+        }
+      },
+      {
+        "createTime" : "2025-09-08T15:09:04.643Z",
+        "name" : "Target",
+        "advancedProperties" : [
+          {
+            "name" : "Forward Rejected Rows",
+            "value" : "true"
+          }
+        ],
+        "groups" : [
+          {
+            "input" : "true",
+            "name" : "DefaultGroup",
+            "output" : "false",
+            "rules" : [
+              {
+                "bulkRename" : "false",
+                "include" : "true"
+              }
+            ]
+          }
+        ],
+        "createTarget" : "true",
+        "fieldMappingMode" : "BY_NAME",
+        "inputSorted" : "false",
+        "schemaProviderType" : "SELECTED_OBJECT",
+        "targetFieldsOrdered" : "false",
+        "updateColumns" : null,
+        "useLabels" : "false",
+        "useSequenceFields" : "false",
+        "fields" : [
+          {
+            "adapterField" : {
+              "name" : "CUSTOMERID"
+            },
+            "name" : "CUSTOMERID",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 2048,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "FIRSTNAME"
+            },
+            "name" : "FIRSTNAME",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 2048,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "LASTNAME"
+            },
+            "name" : "LASTNAME",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 2048,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "EMAIL"
+            },
+            "name" : "EMAIL",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 2048,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "CUSTADDRESS"
+            },
+            "name" : "CUSTADDRESS",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 2048,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "CUSTCITY"
+            },
+            "name" : "CUSTCITY",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 2048,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "CUSTZIP"
+            },
+            "name" : "CUSTZIP",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 2048,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "CUSTCOUNTRY"
+            },
+            "name" : "CUSTCOUNTRY",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 2048,
+            "scale" : 0
+          }
+        ],
+        "dataAdapter" : {
+          "connectionId" : "saas:@8dOsA93lMsdcOesNavcjyc",
+          "connectionName" : "S3_Staging",
+          "excludeDynamicFileNameField" : "false",
+          "objectType" : "SINGLE",
+          "typeSystem" : "TOOLKIT",
+          "useDynamicFileName" : "false",
+          "dataFormat" : {
+            "formatId" : "Flat",
+            "validateHSchema" : "false",
+            "attributes" : [
+              {
+                "name" : "delimiter",
+                "value" : ","
+              },
+              {
+                "name" : "escapeChar",
+                "value" : "\\"
+              },
+              {
+                "name" : "qualifier",
+                "value" : "\""
+              },
+              {
+                "name" : "qualifierMode",
+                "value" : "MINIMAL"
+              },
+              {
+                "name" : "disableEscapeChar",
+                "value" : "true"
+              },
+              {
+                "name" : "codePage",
+                "value" : "UTF-8"
+              },
+              {
+                "name" : "headerLineNumber",
+                "value" : "1"
+              },
+              {
+                "name" : "firstDataRow",
+                "value" : "2"
+              },
+              {
+                "name" : "targetHeader",
+                "value" : "With Header"
+              },
+              {
+                "name" : "importColumnFromFirstLine",
+                "value" : "true"
+              },
+              {
+                "name" : "generateHeader",
+                "value" : "true"
+              },
+              {
+                "name" : "fixedWidthMode",
+                "value" : "false"
+              },
+              {
+                "name" : "maxRowsToPreview",
+                "value" : "0"
+              }
+            ]
+          },
+          "object" : {
+            "name" : "sandbox-tech-sales/rdodson//Test Data/cdc_customers.csv",
+            "label" : "sandbox-tech-sales/rdodson//Test Data/cdc_customers.csv",
+            "path" : "sandbox-tech-sales/rdodson//Test Data/cdc_customers.csv",
+            "retainMetadata" : "false",
+            "fields" : [
+              {
+                "name" : "CUSTOMERID",
+                "fieldType" : "PARSER",
+                "label" : "CUSTOMERID",
+                "nativeName" : "CUSTOMERID",
+                "nativeType" : "flat_string",
+                "original" : "false",
+                "precision" : 2048,
+                "scale" : 0,
+                "metaExtensions" : [
+                  {
+                    "name" : "partitionOrder",
+                    "value" : "0"
+                  }
+                ],
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "cdc_customers.csv"
+                  }
+                ]
+              },
+              {
+                "name" : "FIRSTNAME",
+                "fieldType" : "PARSER",
+                "label" : "FIRSTNAME",
+                "nativeName" : "FIRSTNAME",
+                "nativeType" : "flat_string",
+                "original" : "false",
+                "precision" : 2048,
+                "scale" : 0,
+                "metaExtensions" : [
+                  {
+                    "name" : "partitionOrder",
+                    "value" : "0"
+                  }
+                ],
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "cdc_customers.csv"
+                  }
+                ]
+              },
+              {
+                "name" : "LASTNAME",
+                "fieldType" : "PARSER",
+                "label" : "LASTNAME",
+                "nativeName" : "LASTNAME",
+                "nativeType" : "flat_string",
+                "original" : "false",
+                "precision" : 2048,
+                "scale" : 0,
+                "metaExtensions" : [
+                  {
+                    "name" : "partitionOrder",
+                    "value" : "0"
+                  }
+                ],
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "cdc_customers.csv"
+                  }
+                ]
+              },
+              {
+                "name" : "EMAIL",
+                "fieldType" : "PARSER",
+                "label" : "EMAIL",
+                "nativeName" : "EMAIL",
+                "nativeType" : "flat_string",
+                "original" : "false",
+                "precision" : 2048,
+                "scale" : 0,
+                "metaExtensions" : [
+                  {
+                    "name" : "partitionOrder",
+                    "value" : "0"
+                  }
+                ],
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "cdc_customers.csv"
+                  }
+                ]
+              },
+              {
+                "name" : "CUSTADDRESS",
+                "fieldType" : "PARSER",
+                "label" : "CUSTADDRESS",
+                "nativeName" : "CUSTADDRESS",
+                "nativeType" : "flat_string",
+                "original" : "false",
+                "precision" : 2048,
+                "scale" : 0,
+                "metaExtensions" : [
+                  {
+                    "name" : "partitionOrder",
+                    "value" : "0"
+                  }
+                ],
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "cdc_customers.csv"
+                  }
+                ]
+              },
+              {
+                "name" : "CUSTCITY",
+                "fieldType" : "PARSER",
+                "label" : "CUSTCITY",
+                "nativeName" : "CUSTCITY",
+                "nativeType" : "flat_string",
+                "original" : "false",
+                "precision" : 2048,
+                "scale" : 0,
+                "metaExtensions" : [
+                  {
+                    "name" : "partitionOrder",
+                    "value" : "0"
+                  }
+                ],
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "cdc_customers.csv"
+                  }
+                ]
+              },
+              {
+                "name" : "CUSTZIP",
+                "fieldType" : "PARSER",
+                "label" : "CUSTZIP",
+                "nativeName" : "CUSTZIP",
+                "nativeType" : "flat_string",
+                "original" : "false",
+                "precision" : 2048,
+                "scale" : 0,
+                "metaExtensions" : [
+                  {
+                    "name" : "partitionOrder",
+                    "value" : "0"
+                  }
+                ],
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "cdc_customers.csv"
+                  }
+                ]
+              },
+              {
+                "name" : "CUSTCOUNTRY",
+                "fieldType" : "PARSER",
+                "label" : "CUSTCOUNTRY",
+                "nativeName" : "CUSTCOUNTRY",
+                "nativeType" : "flat_string",
+                "original" : "false",
+                "precision" : 2048,
+                "scale" : 0,
+                "metaExtensions" : [
+                  {
+                    "name" : "partitionOrder",
+                    "value" : "0"
+                  }
+                ],
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "cdc_customers.csv"
+                  }
+                ]
+              }
+            ],
+            "objectAttributes" : [
+              {
+                "name" : "parent",
+                "value" : "sandbox-tech-sales/rdodson//Test Data"
+              }
+            ]
+          },
+          "writeOptions" : {
+            "batchSize" : 0,
+            "bulkApi" : "false",
+            "handleDecimalRoundOff" : "false",
+            "handleSpecialChars" : "false",
+            "operations" : [
+              "Insert"
+            ],
+            "setFieldsToNull" : "false",
+            "truncate" : "false",
+            "useErrorFile" : "false",
+            "useExactSrcNames" : "false",
+            "useSuccessFile" : "false",
+            "tgtObjectAttributes" : [
+              {
+                "name" : "parent",
+                "value" : "sandbox-tech-sales/rdodson//Test Data"
+              }
+            ]
+          }
+        }
+      }
+    ]
+  },
+  "vcsExportTime" : "2025-09-09 17:00:41 PDT"
+}

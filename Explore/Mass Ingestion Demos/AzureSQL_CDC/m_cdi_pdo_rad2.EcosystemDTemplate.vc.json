@@ -1,0 +1,2446 @@
+{
+  "content" : {
+    "allowMaxFieldLength" : "false",
+    "documentType" : "ECOSYSTEM_MAPPING",
+    "name" : "m_cdi_pdo_rad2",
+    "specialCharacterSupport" : "false",
+    "links" : [
+      {
+        "link" : "Src_Customers_Sflk -> Joiner",
+        "groupLink" : "DefaultGroup -> Master"
+      },
+      {
+        "link" : "Top_10_Customers -> Tgt_Customer_Revenue_Rank_Snowflake2"
+      },
+      {
+        "link" : "Joiner -> Aggregator",
+        "groupLink" : "OutputGroup -> DefaultGroup"
+      },
+      {
+        "link" : "Aggregator -> Top_10_Customers"
+      },
+      {
+        "link" : "Expression -> Joiner",
+        "groupLink" : "DefaultGroup -> Detail"
+      },
+      {
+        "link" : "Src_Orders_Sflk -> Expression"
+      },
+      {
+        "link" : "Src_products_Sflk -> Joiner1",
+        "groupLink" : "DefaultGroup -> Detail"
+      },
+      {
+        "link" : "Joiner1 -> Aggregator1",
+        "groupLink" : "OutputGroup -> DefaultGroup"
+      },
+      {
+        "link" : "Aggregator1 -> Top_10_Products"
+      },
+      {
+        "link" : "Joiner -> Joiner1",
+        "groupLink" : "OutputGroup -> Master"
+      },
+      {
+        "link" : "Top_10_Products -> Tgt_Prod_Revenue_Snowflake"
+      },
+      {
+        "link" : "Src_Suppliers_Sflk -> Joiner2",
+        "groupLink" : "DefaultGroup -> Detail"
+      },
+      {
+        "link" : "Joiner1 -> Joiner2",
+        "groupLink" : "OutputGroup -> Master"
+      },
+      {
+        "link" : "Joiner2 -> Aggregator2",
+        "groupLink" : "OutputGroup -> DefaultGroup"
+      },
+      {
+        "link" : "Aggregator2 -> Top_10_Suppliers"
+      },
+      {
+        "link" : "Top_10_Suppliers -> Tgt_Supp_Revenue_Snowflake"
+      }
+    ],
+    "transformations" : [
+      {
+        "createTime" : "2025-07-16T02:40:32.874Z",
+        "name" : "Src_Customers_Sflk",
+        "advancedProperties" : [
+          {
+            "name" : "Tracing Level",
+            "value" : "Normal"
+          },
+          {
+            "name" : "Output is deterministic",
+            "value" : "false"
+          }
+        ],
+        "groups" : [
+          {
+            "input" : "false",
+            "name" : "DefaultGroup",
+            "output" : "true"
+          }
+        ],
+        "generateFilenamePort" : "false",
+        "useLabels" : "false",
+        "useSequenceFields" : "false",
+        "fields" : [
+          {
+            "adapterField" : {
+              "name" : "CUSTOMERID"
+            },
+            "name" : "CUSTOMERID",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 2048,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "FIRSTNAME"
+            },
+            "name" : "FIRSTNAME",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 2048,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "LASTNAME"
+            },
+            "name" : "LASTNAME",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 2048,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "EMAIL"
+            },
+            "name" : "EMAIL",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 2048,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "CUSTADDRESS"
+            },
+            "name" : "CUSTADDRESS",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 2048,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "CUSTCITY"
+            },
+            "name" : "CUSTCITY",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 2048,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "CUSTZIP"
+            },
+            "name" : "CUSTZIP",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 2048,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "CUSTCOUNTRY"
+            },
+            "name" : "CUSTCOUNTRY",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 2048,
+            "scale" : 0
+          }
+        ],
+        "dataAdapter" : {
+          "connectionId" : "saas:@8RvqGoHyhvniQWk7Wazgkc",
+          "connectionName" : "Snowflake_retail_cpg",
+          "excludeDynamicFileNameField" : "false",
+          "objectType" : "SINGLE",
+          "typeSystem" : "TOOLKIT",
+          "useDynamicFileName" : "false",
+          "object" : {
+            "name" : "RETAIL_CPG/PUBLIC/RAD_Customers",
+            "label" : "RETAIL_CPG/PUBLIC/RAD_Customers",
+            "objectName" : "RAD_Customers",
+            "objectType" : "table",
+            "path" : "RETAIL_CPG/PUBLIC/RAD_Customers",
+            "retainMetadata" : "false",
+            "fields" : [
+              {
+                "name" : "CUSTOMERID",
+                "fieldType" : "CONNECTOR",
+                "label" : "CUSTOMERID",
+                "nativeName" : "CUSTOMERID",
+                "nativeType" : "varchar",
+                "original" : "false",
+                "precision" : 2048,
+                "scale" : 0,
+                "metaExtensions" : [
+                  {
+                    "name" : "isNullable",
+                    "value" : "true"
+                  }
+                ],
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "RAD_Customers"
+                  }
+                ]
+              },
+              {
+                "name" : "FIRSTNAME",
+                "fieldType" : "CONNECTOR",
+                "label" : "FIRSTNAME",
+                "nativeName" : "FIRSTNAME",
+                "nativeType" : "varchar",
+                "original" : "false",
+                "precision" : 2048,
+                "scale" : 0,
+                "metaExtensions" : [
+                  {
+                    "name" : "isNullable",
+                    "value" : "true"
+                  }
+                ],
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "RAD_Customers"
+                  }
+                ]
+              },
+              {
+                "name" : "LASTNAME",
+                "fieldType" : "CONNECTOR",
+                "label" : "LASTNAME",
+                "nativeName" : "LASTNAME",
+                "nativeType" : "varchar",
+                "original" : "false",
+                "precision" : 2048,
+                "scale" : 0,
+                "metaExtensions" : [
+                  {
+                    "name" : "isNullable",
+                    "value" : "true"
+                  }
+                ],
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "RAD_Customers"
+                  }
+                ]
+              },
+              {
+                "name" : "EMAIL",
+                "fieldType" : "CONNECTOR",
+                "label" : "EMAIL",
+                "nativeName" : "EMAIL",
+                "nativeType" : "varchar",
+                "original" : "false",
+                "precision" : 2048,
+                "scale" : 0,
+                "metaExtensions" : [
+                  {
+                    "name" : "isNullable",
+                    "value" : "true"
+                  }
+                ],
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "RAD_Customers"
+                  }
+                ]
+              },
+              {
+                "name" : "CUSTADDRESS",
+                "fieldType" : "CONNECTOR",
+                "label" : "CUSTADDRESS",
+                "nativeName" : "CUSTADDRESS",
+                "nativeType" : "varchar",
+                "original" : "false",
+                "precision" : 2048,
+                "scale" : 0,
+                "metaExtensions" : [
+                  {
+                    "name" : "isNullable",
+                    "value" : "true"
+                  }
+                ],
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "RAD_Customers"
+                  }
+                ]
+              },
+              {
+                "name" : "CUSTCITY",
+                "fieldType" : "CONNECTOR",
+                "label" : "CUSTCITY",
+                "nativeName" : "CUSTCITY",
+                "nativeType" : "varchar",
+                "original" : "false",
+                "precision" : 2048,
+                "scale" : 0,
+                "metaExtensions" : [
+                  {
+                    "name" : "isNullable",
+                    "value" : "true"
+                  }
+                ],
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "RAD_Customers"
+                  }
+                ]
+              },
+              {
+                "name" : "CUSTZIP",
+                "fieldType" : "CONNECTOR",
+                "label" : "CUSTZIP",
+                "nativeName" : "CUSTZIP",
+                "nativeType" : "varchar",
+                "original" : "false",
+                "precision" : 2048,
+                "scale" : 0,
+                "metaExtensions" : [
+                  {
+                    "name" : "isNullable",
+                    "value" : "true"
+                  }
+                ],
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "RAD_Customers"
+                  }
+                ]
+              },
+              {
+                "name" : "CUSTCOUNTRY",
+                "fieldType" : "CONNECTOR",
+                "label" : "CUSTCOUNTRY",
+                "nativeName" : "CUSTCOUNTRY",
+                "nativeType" : "varchar",
+                "original" : "false",
+                "precision" : 2048,
+                "scale" : 0,
+                "metaExtensions" : [
+                  {
+                    "name" : "isNullable",
+                    "value" : "true"
+                  }
+                ],
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "RAD_Customers"
+                  }
+                ]
+              }
+            ],
+            "objectAttributes" : [
+              {
+                "name" : "tableType",
+                "value" : "TABLE"
+              },
+              {
+                "name" : "storageSerPol",
+                "value" : "Optimized"
+              },
+              {
+                "name" : "tableFormat",
+                "value" : "Standard Table"
+              }
+            ]
+          },
+          "readOptions" : {
+            "commandType" : 0,
+            "descending" : "false",
+            "queryAll" : "false",
+            "rowLimit" : 0,
+            "selectDistinct" : "false"
+          }
+        }
+      },
+      {
+        "createTime" : "2025-07-16T20:59:31.100Z",
+        "name" : "Src_Orders_Sflk",
+        "groups" : [
+          {
+            "input" : "false",
+            "name" : "DefaultGroup",
+            "output" : "true"
+          }
+        ],
+        "generateFilenamePort" : "false",
+        "useLabels" : "false",
+        "useSequenceFields" : "false",
+        "fields" : [
+          {
+            "adapterField" : {
+              "name" : "ORDERID"
+            },
+            "name" : "ORDERID",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 2048,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "CUSTOMERID"
+            },
+            "name" : "CUSTOMERID",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 2048,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "PRODUCTID"
+            },
+            "name" : "PRODUCTID",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 2048,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "ORDERDATE"
+            },
+            "name" : "ORDERDATE",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 2048,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "QUANTITY"
+            },
+            "name" : "QUANTITY",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 2048,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "PRICEPERUNIT"
+            },
+            "name" : "PRICEPERUNIT",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 2048,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "TOTALPRICE"
+            },
+            "name" : "TOTALPRICE",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 2048,
+            "scale" : 0
+          }
+        ],
+        "dataAdapter" : {
+          "connectionId" : "saas:@8RvqGoHyhvniQWk7Wazgkc",
+          "connectionName" : "Snowflake_retail_cpg",
+          "excludeDynamicFileNameField" : "false",
+          "objectType" : "SINGLE",
+          "typeSystem" : "TOOLKIT",
+          "useDynamicFileName" : "false",
+          "object" : {
+            "name" : "RETAIL_CPG/PUBLIC/RAD_Orders",
+            "label" : "RETAIL_CPG/PUBLIC/RAD_Orders",
+            "objectName" : "RAD_Orders",
+            "objectType" : "table",
+            "path" : "RETAIL_CPG/PUBLIC/RAD_Orders",
+            "retainMetadata" : "false",
+            "fields" : [
+              {
+                "name" : "ORDERID",
+                "fieldType" : "CONNECTOR",
+                "label" : "ORDERID",
+                "nativeName" : "ORDERID",
+                "nativeType" : "varchar",
+                "original" : "false",
+                "precision" : 2048,
+                "scale" : 0,
+                "metaExtensions" : [
+                  {
+                    "name" : "isNullable",
+                    "value" : "true"
+                  }
+                ],
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "RAD_Orders"
+                  }
+                ]
+              },
+              {
+                "name" : "CUSTOMERID",
+                "fieldType" : "CONNECTOR",
+                "label" : "CUSTOMERID",
+                "nativeName" : "CUSTOMERID",
+                "nativeType" : "varchar",
+                "original" : "false",
+                "precision" : 2048,
+                "scale" : 0,
+                "metaExtensions" : [
+                  {
+                    "name" : "isNullable",
+                    "value" : "true"
+                  }
+                ],
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "RAD_Orders"
+                  }
+                ]
+              },
+              {
+                "name" : "PRODUCTID",
+                "fieldType" : "CONNECTOR",
+                "label" : "PRODUCTID",
+                "nativeName" : "PRODUCTID",
+                "nativeType" : "varchar",
+                "original" : "false",
+                "precision" : 2048,
+                "scale" : 0,
+                "metaExtensions" : [
+                  {
+                    "name" : "isNullable",
+                    "value" : "true"
+                  }
+                ],
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "RAD_Orders"
+                  }
+                ]
+              },
+              {
+                "name" : "ORDERDATE",
+                "fieldType" : "CONNECTOR",
+                "label" : "ORDERDATE",
+                "nativeName" : "ORDERDATE",
+                "nativeType" : "varchar",
+                "original" : "false",
+                "precision" : 2048,
+                "scale" : 0,
+                "metaExtensions" : [
+                  {
+                    "name" : "isNullable",
+                    "value" : "true"
+                  }
+                ],
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "RAD_Orders"
+                  }
+                ]
+              },
+              {
+                "name" : "QUANTITY",
+                "fieldType" : "CONNECTOR",
+                "label" : "QUANTITY",
+                "nativeName" : "QUANTITY",
+                "nativeType" : "varchar",
+                "original" : "false",
+                "precision" : 2048,
+                "scale" : 0,
+                "metaExtensions" : [
+                  {
+                    "name" : "isNullable",
+                    "value" : "true"
+                  }
+                ],
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "RAD_Orders"
+                  }
+                ]
+              },
+              {
+                "name" : "PRICEPERUNIT",
+                "fieldType" : "CONNECTOR",
+                "label" : "PRICEPERUNIT",
+                "nativeName" : "PRICEPERUNIT",
+                "nativeType" : "varchar",
+                "original" : "false",
+                "precision" : 2048,
+                "scale" : 0,
+                "metaExtensions" : [
+                  {
+                    "name" : "isNullable",
+                    "value" : "true"
+                  }
+                ],
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "RAD_Orders"
+                  }
+                ]
+              },
+              {
+                "name" : "TOTALPRICE",
+                "fieldType" : "CONNECTOR",
+                "label" : "TOTALPRICE",
+                "nativeName" : "TOTALPRICE",
+                "nativeType" : "varchar",
+                "original" : "false",
+                "precision" : 2048,
+                "scale" : 0,
+                "metaExtensions" : [
+                  {
+                    "name" : "isNullable",
+                    "value" : "true"
+                  }
+                ],
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "RAD_Orders"
+                  }
+                ]
+              }
+            ],
+            "objectAttributes" : [
+              {
+                "name" : "tableType",
+                "value" : "TABLE"
+              },
+              {
+                "name" : "storageSerPol",
+                "value" : "Optimized"
+              },
+              {
+                "name" : "tableFormat",
+                "value" : "Standard Table"
+              }
+            ]
+          },
+          "readOptions" : {
+            "commandType" : 0,
+            "descending" : "false",
+            "queryAll" : "false",
+            "rowLimit" : 0,
+            "selectDistinct" : "false"
+          }
+        }
+      },
+      {
+        "createTime" : "2025-07-16T23:44:11.402Z",
+        "name" : "Tgt_Customer_Revenue_Rank_Snowflake2",
+        "groups" : [
+          {
+            "input" : "true",
+            "name" : "DefaultGroup",
+            "output" : "false",
+            "rules" : [
+              {
+                "bulkRename" : "false",
+                "include" : "true"
+              }
+            ]
+          }
+        ],
+        "createTarget" : "true",
+        "fieldMappingMode" : "BY_NAME",
+        "inputSorted" : "false",
+        "schemaProviderType" : "SELECTED_OBJECT",
+        "targetFieldsOrdered" : "false",
+        "updateColumns" : null,
+        "useLabels" : "false",
+        "useSequenceFields" : "false",
+        "fields" : [
+          {
+            "adapterField" : {
+              "name" : "RANKINDEX"
+            },
+            "name" : "RANKINDEX",
+            "platformType" : {
+              "name" : "integer"
+            },
+            "precision" : 10,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "TOT_CUST_REVENUE"
+            },
+            "name" : "TOT_CUST_REVENUE",
+            "platformType" : {
+              "name" : "decimal"
+            },
+            "precision" : 15,
+            "scale" : 2
+          },
+          {
+            "adapterField" : {
+              "name" : "Mast_CUSTOMERID"
+            },
+            "name" : "Mast_CUSTOMERID",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 2048,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "Mast_FIRSTNAME"
+            },
+            "name" : "Mast_FIRSTNAME",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 2048,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "Mast_LASTNAME"
+            },
+            "name" : "Mast_LASTNAME",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 2048,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "Mast_EMAIL"
+            },
+            "name" : "Mast_EMAIL",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 2048,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "Mast_CUSTADDRESS"
+            },
+            "name" : "Mast_CUSTADDRESS",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 2048,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "Mast_CUSTCITY"
+            },
+            "name" : "Mast_CUSTCITY",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 2048,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "Mast_CUSTZIP"
+            },
+            "name" : "Mast_CUSTZIP",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 2048,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "Mast_CUSTCOUNTRY"
+            },
+            "name" : "Mast_CUSTCOUNTRY",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 2048,
+            "scale" : 0
+          }
+        ],
+        "dataAdapter" : {
+          "connectionId" : "saas:@8RvqGoHyhvniQWk7Wazgkc",
+          "connectionName" : "Snowflake_retail_cpg",
+          "excludeDynamicFileNameField" : "false",
+          "objectType" : "SINGLE",
+          "typeSystem" : "TOOLKIT",
+          "useDynamicFileName" : "false",
+          "object" : {
+            "name" : "RETAIL_CPG/PUBLIC/DEMO_CDC_TOT_CUST_REVENUE_RAD",
+            "label" : "RETAIL_CPG/PUBLIC/DEMO_CDC_TOT_CUST_REVENUE_RAD",
+            "path" : "RETAIL_CPG/PUBLIC/DEMO_CDC_TOT_CUST_REVENUE_RAD",
+            "retainMetadata" : "false",
+            "fields" : [
+              {
+                "name" : "RANKINDEX",
+                "fieldType" : "CONNECTOR",
+                "label" : "RANKINDEX",
+                "nativeName" : "RANKINDEX",
+                "nativeType" : "number",
+                "original" : "false",
+                "precision" : 10,
+                "scale" : 0,
+                "metaExtensions" : [
+                  {
+                    "name" : "isNullable",
+                    "value" : "true"
+                  }
+                ],
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "DEMO_CDC_TOT_CUST_REVENUE_RAD"
+                  }
+                ]
+              },
+              {
+                "name" : "TOT_CUST_REVENUE",
+                "fieldType" : "CONNECTOR",
+                "label" : "TOT_CUST_REVENUE",
+                "nativeName" : "TOT_CUST_REVENUE",
+                "nativeType" : "number",
+                "original" : "false",
+                "precision" : 15,
+                "scale" : 2,
+                "metaExtensions" : [
+                  {
+                    "name" : "isNullable",
+                    "value" : "true"
+                  }
+                ],
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "DEMO_CDC_TOT_CUST_REVENUE_RAD"
+                  }
+                ]
+              },
+              {
+                "name" : "Mast_CUSTOMERID",
+                "fieldType" : "CONNECTOR",
+                "label" : "CUSTOMERID",
+                "nativeName" : "CUSTOMERID",
+                "nativeType" : "varchar",
+                "original" : "false",
+                "precision" : 2048,
+                "scale" : 0,
+                "metaExtensions" : [
+                  {
+                    "name" : "isNullable",
+                    "value" : "true"
+                  }
+                ],
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "DEMO_CDC_TOT_CUST_REVENUE_RAD"
+                  }
+                ]
+              },
+              {
+                "name" : "Mast_FIRSTNAME",
+                "fieldType" : "CONNECTOR",
+                "label" : "FIRSTNAME",
+                "nativeName" : "FIRSTNAME",
+                "nativeType" : "varchar",
+                "original" : "false",
+                "precision" : 2048,
+                "scale" : 0,
+                "metaExtensions" : [
+                  {
+                    "name" : "isNullable",
+                    "value" : "true"
+                  }
+                ],
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "DEMO_CDC_TOT_CUST_REVENUE_RAD"
+                  }
+                ]
+              },
+              {
+                "name" : "Mast_LASTNAME",
+                "fieldType" : "CONNECTOR",
+                "label" : "LASTNAME",
+                "nativeName" : "LASTNAME",
+                "nativeType" : "varchar",
+                "original" : "false",
+                "precision" : 2048,
+                "scale" : 0,
+                "metaExtensions" : [
+                  {
+                    "name" : "isNullable",
+                    "value" : "true"
+                  }
+                ],
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "DEMO_CDC_TOT_CUST_REVENUE_RAD"
+                  }
+                ]
+              },
+              {
+                "name" : "Mast_EMAIL",
+                "fieldType" : "CONNECTOR",
+                "label" : "EMAIL",
+                "nativeName" : "EMAIL",
+                "nativeType" : "varchar",
+                "original" : "false",
+                "precision" : 2048,
+                "scale" : 0,
+                "metaExtensions" : [
+                  {
+                    "name" : "isNullable",
+                    "value" : "true"
+                  }
+                ],
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "DEMO_CDC_TOT_CUST_REVENUE_RAD"
+                  }
+                ]
+              },
+              {
+                "name" : "Mast_CUSTADDRESS",
+                "fieldType" : "CONNECTOR",
+                "label" : "CUSTADDRESS",
+                "nativeName" : "CUSTADDRESS",
+                "nativeType" : "varchar",
+                "original" : "false",
+                "precision" : 2048,
+                "scale" : 0,
+                "metaExtensions" : [
+                  {
+                    "name" : "isNullable",
+                    "value" : "true"
+                  }
+                ],
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "DEMO_CDC_TOT_CUST_REVENUE_RAD"
+                  }
+                ]
+              },
+              {
+                "name" : "Mast_CUSTCITY",
+                "fieldType" : "CONNECTOR",
+                "label" : "CUSTCITY",
+                "nativeName" : "CUSTCITY",
+                "nativeType" : "varchar",
+                "original" : "false",
+                "precision" : 2048,
+                "scale" : 0,
+                "metaExtensions" : [
+                  {
+                    "name" : "isNullable",
+                    "value" : "true"
+                  }
+                ],
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "DEMO_CDC_TOT_CUST_REVENUE_RAD"
+                  }
+                ]
+              },
+              {
+                "name" : "Mast_CUSTZIP",
+                "fieldType" : "CONNECTOR",
+                "label" : "CUSTZIP",
+                "nativeName" : "CUSTZIP",
+                "nativeType" : "varchar",
+                "original" : "false",
+                "precision" : 2048,
+                "scale" : 0,
+                "metaExtensions" : [
+                  {
+                    "name" : "isNullable",
+                    "value" : "true"
+                  }
+                ],
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "DEMO_CDC_TOT_CUST_REVENUE_RAD"
+                  }
+                ]
+              },
+              {
+                "name" : "Mast_CUSTCOUNTRY",
+                "fieldType" : "CONNECTOR",
+                "label" : "CUSTCOUNTRY",
+                "nativeName" : "CUSTCOUNTRY",
+                "nativeType" : "varchar",
+                "original" : "false",
+                "precision" : 2048,
+                "scale" : 0,
+                "metaExtensions" : [
+                  {
+                    "name" : "isNullable",
+                    "value" : "true"
+                  }
+                ],
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "DEMO_CDC_TOT_CUST_REVENUE_RAD"
+                  }
+                ]
+              }
+            ],
+            "objectAttributes" : [
+              {
+                "name" : "tableFormat",
+                "value" : "Standard Table"
+              },
+              {
+                "name" : "parent",
+                "value" : "RETAIL_CPG/PUBLIC"
+              }
+            ]
+          },
+          "writeOptions" : {
+            "batchSize" : 0,
+            "bulkApi" : "false",
+            "handleDecimalRoundOff" : "false",
+            "handleSpecialChars" : "false",
+            "operations" : [
+              "Insert"
+            ],
+            "setFieldsToNull" : "false",
+            "truncate" : "false",
+            "useErrorFile" : "false",
+            "useExactSrcNames" : "false",
+            "useSuccessFile" : "false",
+            "tgtObjectAttributes" : [
+              {
+                "name" : "tableFormat",
+                "value" : "Standard Table"
+              },
+              {
+                "name" : "parent",
+                "value" : "RETAIL_CPG/PUBLIC"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "createTime" : "2025-07-17T03:46:21.064Z",
+        "name" : "Joiner",
+        "groups" : [
+          {
+            "input" : "true",
+            "name" : "Master",
+            "output" : "false",
+            "rules" : [
+              {
+                "bulkRename" : "true",
+                "include" : "true",
+                "bulkRenameOption" : {
+                  "literal" : "Mast_",
+                  "suffix" : "false"
+                }
+              }
+            ]
+          },
+          {
+            "input" : "true",
+            "name" : "Detail",
+            "output" : "false",
+            "rules" : [
+              {
+                "bulkRename" : "false",
+                "include" : "true"
+              }
+            ]
+          },
+          {
+            "input" : "false",
+            "name" : "OutputGroup",
+            "output" : "true"
+          }
+        ],
+        "joinType" : "Normal Join",
+        "joinConditions" : [
+          {
+            "leftOperand" : "Mast_CUSTOMERID",
+            "operator" : "=",
+            "rightOperand" : "CUSTOMERID"
+          }
+        ]
+      },
+      {
+        "createTime" : "2025-07-17T03:55:30.427Z",
+        "name" : "Top_10_Customers",
+        "groups" : [
+          {
+            "input" : "true",
+            "name" : "DefaultGroup",
+            "output" : "true",
+            "rules" : [
+              {
+                "bulkRename" : "false",
+                "include" : "true",
+                "names" : [
+                  {
+                    "inputName" : "Mast_CUSTADDRESS"
+                  },
+                  {
+                    "inputName" : "Mast_CUSTCITY"
+                  },
+                  {
+                    "inputName" : "Mast_CUSTCOUNTRY"
+                  },
+                  {
+                    "inputName" : "Mast_CUSTOMERID"
+                  },
+                  {
+                    "inputName" : "Mast_CUSTZIP"
+                  },
+                  {
+                    "inputName" : "Mast_EMAIL"
+                  },
+                  {
+                    "inputName" : "Mast_FIRSTNAME"
+                  },
+                  {
+                    "inputName" : "Mast_LASTNAME"
+                  },
+                  {
+                    "inputName" : "TOT_CUST_REVENUE"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "numOfRows" : 10,
+        "rankField" : "TOT_CUST_REVENUE",
+        "isTop" : "true"
+      },
+      {
+        "createTime" : "2025-07-17T04:00:35.299Z",
+        "name" : "Aggregator",
+        "groups" : [
+          {
+            "input" : "true",
+            "name" : "DefaultGroup",
+            "output" : "true",
+            "rules" : [
+              {
+                "bulkRename" : "false",
+                "include" : "true"
+              }
+            ]
+          }
+        ],
+        "fields" : [
+          {
+            "name" : "TOT_CUST_REVENUE",
+            "platformType" : {
+              "name" : "decimal"
+            },
+            "precision" : 15,
+            "scale" : 2,
+            "expFieldType" : "OUTPUT",
+            "expression" : "NUM_PRICEPERUNIT*TO_NUMBER(QUANTITY)"
+          }
+        ],
+        "groupByFieldsList" : {
+          "fields" : [
+            {
+              "fieldName" : "Mast_CUSTOMERID"
+            }
+          ]
+        }
+      },
+      {
+        "createTime" : "2025-07-17T04:05:35.138Z",
+        "name" : "Expression",
+        "groups" : [
+          {
+            "input" : "true",
+            "name" : "DefaultGroup",
+            "output" : "true",
+            "rules" : [
+              {
+                "bulkRename" : "false",
+                "include" : "true"
+              }
+            ]
+          }
+        ],
+        "windowConfigurationEnabled" : "false",
+        "fields" : [
+          {
+            "name" : "NUM_PRICEPERUNIT",
+            "platformType" : {
+              "name" : "decimal"
+            },
+            "precision" : 10,
+            "scale" : 2,
+            "expFieldType" : "OUTPUT",
+            "expression" : "TO_NUMBER( PRICEPERUNIT,10,2)"
+          }
+        ],
+        "windowSpec" : {
+          "allRowsFollowing" : "false",
+          "allRowsPreceding" : "false",
+          "endOffset" : 0,
+          "startOffset" : 0,
+          "partitionKeys" : null
+        }
+      },
+      {
+        "createTime" : "2025-07-17T14:23:11.624Z",
+        "name" : "Src_products_Sflk",
+        "groups" : [
+          {
+            "input" : "false",
+            "name" : "DefaultGroup",
+            "output" : "true"
+          }
+        ],
+        "generateFilenamePort" : "false",
+        "useLabels" : "false",
+        "useSequenceFields" : "false",
+        "fields" : [
+          {
+            "adapterField" : {
+              "name" : "PRODUCTID"
+            },
+            "name" : "PRODUCTID",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 2048,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "PRODUCTNAME"
+            },
+            "name" : "PRODUCTNAME",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 2048,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "CATEGORY"
+            },
+            "name" : "CATEGORY",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 2048,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "PRICE"
+            },
+            "name" : "PRICE",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 2048,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "INVENTORYLEVEL"
+            },
+            "name" : "INVENTORYLEVEL",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 2048,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "SUPPLIERID"
+            },
+            "name" : "SUPPLIERID",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 2048,
+            "scale" : 0
+          }
+        ],
+        "dataAdapter" : {
+          "connectionId" : "saas:@8RvqGoHyhvniQWk7Wazgkc",
+          "connectionName" : "Snowflake_retail_cpg",
+          "excludeDynamicFileNameField" : "false",
+          "objectType" : "SINGLE",
+          "typeSystem" : "TOOLKIT",
+          "useDynamicFileName" : "false",
+          "object" : {
+            "name" : "RETAIL_CPG/PUBLIC/RAD_Products",
+            "label" : "RETAIL_CPG/PUBLIC/RAD_Products",
+            "objectName" : "RAD_Products",
+            "objectType" : "table",
+            "path" : "RETAIL_CPG/PUBLIC/RAD_Products",
+            "retainMetadata" : "false",
+            "fields" : [
+              {
+                "name" : "PRODUCTID",
+                "fieldType" : "CONNECTOR",
+                "label" : "PRODUCTID",
+                "nativeName" : "PRODUCTID",
+                "nativeType" : "varchar",
+                "original" : "false",
+                "precision" : 2048,
+                "scale" : 0,
+                "metaExtensions" : [
+                  {
+                    "name" : "isNullable",
+                    "value" : "true"
+                  }
+                ],
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "RAD_Products"
+                  }
+                ]
+              },
+              {
+                "name" : "PRODUCTNAME",
+                "fieldType" : "CONNECTOR",
+                "label" : "PRODUCTNAME",
+                "nativeName" : "PRODUCTNAME",
+                "nativeType" : "varchar",
+                "original" : "false",
+                "precision" : 2048,
+                "scale" : 0,
+                "metaExtensions" : [
+                  {
+                    "name" : "isNullable",
+                    "value" : "true"
+                  }
+                ],
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "RAD_Products"
+                  }
+                ]
+              },
+              {
+                "name" : "CATEGORY",
+                "fieldType" : "CONNECTOR",
+                "label" : "CATEGORY",
+                "nativeName" : "CATEGORY",
+                "nativeType" : "varchar",
+                "original" : "false",
+                "precision" : 2048,
+                "scale" : 0,
+                "metaExtensions" : [
+                  {
+                    "name" : "isNullable",
+                    "value" : "true"
+                  }
+                ],
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "RAD_Products"
+                  }
+                ]
+              },
+              {
+                "name" : "PRICE",
+                "fieldType" : "CONNECTOR",
+                "label" : "PRICE",
+                "nativeName" : "PRICE",
+                "nativeType" : "varchar",
+                "original" : "false",
+                "precision" : 2048,
+                "scale" : 0,
+                "metaExtensions" : [
+                  {
+                    "name" : "isNullable",
+                    "value" : "true"
+                  }
+                ],
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "RAD_Products"
+                  }
+                ]
+              },
+              {
+                "name" : "INVENTORYLEVEL",
+                "fieldType" : "CONNECTOR",
+                "label" : "INVENTORYLEVEL",
+                "nativeName" : "INVENTORYLEVEL",
+                "nativeType" : "varchar",
+                "original" : "false",
+                "precision" : 2048,
+                "scale" : 0,
+                "metaExtensions" : [
+                  {
+                    "name" : "isNullable",
+                    "value" : "true"
+                  }
+                ],
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "RAD_Products"
+                  }
+                ]
+              },
+              {
+                "name" : "SUPPLIERID",
+                "fieldType" : "CONNECTOR",
+                "label" : "SUPPLIERID",
+                "nativeName" : "SUPPLIERID",
+                "nativeType" : "varchar",
+                "original" : "false",
+                "precision" : 2048,
+                "scale" : 0,
+                "metaExtensions" : [
+                  {
+                    "name" : "isNullable",
+                    "value" : "true"
+                  }
+                ],
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "RAD_Products"
+                  }
+                ]
+              }
+            ],
+            "objectAttributes" : [
+              {
+                "name" : "tableType",
+                "value" : "TABLE"
+              },
+              {
+                "name" : "storageSerPol",
+                "value" : "Optimized"
+              },
+              {
+                "name" : "tableFormat",
+                "value" : "Standard Table"
+              }
+            ]
+          },
+          "readOptions" : {
+            "commandType" : 0,
+            "descending" : "false",
+            "queryAll" : "false",
+            "rowLimit" : 0,
+            "selectDistinct" : "false"
+          }
+        }
+      },
+      {
+        "createTime" : "2025-07-17T14:37:50.849Z",
+        "name" : "Joiner1",
+        "groups" : [
+          {
+            "input" : "true",
+            "name" : "Master",
+            "output" : "false",
+            "rules" : [
+              {
+                "bulkRename" : "false",
+                "include" : "true"
+              }
+            ]
+          },
+          {
+            "input" : "true",
+            "name" : "Detail",
+            "output" : "false",
+            "conflictResolutions" : [
+              {
+                "precedingGroupName" : "DefaultGroup",
+                "precedingTxName" : "Src_products_Sflk",
+                "rule" : {
+                  "bulkRename" : "true",
+                  "include" : "true",
+                  "bulkRenameOption" : {
+                    "literal" : "Det_",
+                    "suffix" : "false"
+                  }
+                }
+              }
+            ],
+            "rules" : [
+              {
+                "bulkRename" : "false",
+                "include" : "true"
+              }
+            ]
+          },
+          {
+            "input" : "false",
+            "name" : "OutputGroup",
+            "output" : "true"
+          }
+        ],
+        "joinType" : "Normal Join",
+        "joinConditions" : [
+          {
+            "leftOperand" : "PRODUCTID",
+            "operator" : "=",
+            "rightOperand" : "Det_PRODUCTID"
+          }
+        ]
+      },
+      {
+        "createTime" : "2025-07-17T14:39:56.454Z",
+        "name" : "Aggregator1",
+        "groups" : [
+          {
+            "input" : "true",
+            "name" : "DefaultGroup",
+            "output" : "true",
+            "rules" : [
+              {
+                "bulkRename" : "false",
+                "include" : "true"
+              }
+            ]
+          }
+        ],
+        "fields" : [
+          {
+            "name" : "TOT_PROD_REVENUE",
+            "platformType" : {
+              "name" : "decimal"
+            },
+            "precision" : 15,
+            "scale" : 2,
+            "expFieldType" : "OUTPUT",
+            "expression" : "NUM_PRICEPERUNIT*TO_NUMBER(QUANTITY)"
+          }
+        ],
+        "groupByFieldsList" : {
+          "fields" : [
+            {
+              "fieldName" : "Det_PRODUCTID"
+            }
+          ]
+        }
+      },
+      {
+        "createTime" : "2025-07-17T14:40:47.739Z",
+        "name" : "Top_10_Products",
+        "groups" : [
+          {
+            "input" : "true",
+            "name" : "DefaultGroup",
+            "output" : "true",
+            "rules" : [
+              {
+                "bulkRename" : "false",
+                "include" : "true",
+                "names" : [
+                  {
+                    "inputName" : "Det_PRODUCTID"
+                  },
+                  {
+                    "inputName" : "Det_PRODUCTNAME"
+                  },
+                  {
+                    "inputName" : "TOT_PROD_REVENUE"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "numOfRows" : 10,
+        "rankField" : "TOT_PROD_REVENUE",
+        "isTop" : "true"
+      },
+      {
+        "createTime" : "2025-07-17T14:52:01.892Z",
+        "name" : "Tgt_Prod_Revenue_Snowflake",
+        "groups" : [
+          {
+            "input" : "true",
+            "name" : "DefaultGroup",
+            "output" : "false",
+            "rules" : [
+              {
+                "bulkRename" : "false",
+                "include" : "true"
+              }
+            ]
+          }
+        ],
+        "createTarget" : "true",
+        "fieldMappingMode" : "BY_NAME",
+        "inputSorted" : "false",
+        "schemaProviderType" : "SELECTED_OBJECT",
+        "targetFieldsOrdered" : "false",
+        "updateColumns" : null,
+        "useLabels" : "false",
+        "useSequenceFields" : "false",
+        "fields" : [
+          {
+            "adapterField" : {
+              "name" : "RANKINDEX"
+            },
+            "name" : "RANKINDEX",
+            "platformType" : {
+              "name" : "integer"
+            },
+            "precision" : 10,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "TOT_PROD_REVENUE"
+            },
+            "name" : "TOT_PROD_REVENUE",
+            "platformType" : {
+              "name" : "decimal"
+            },
+            "precision" : 15,
+            "scale" : 2
+          },
+          {
+            "adapterField" : {
+              "name" : "Det_PRODUCTID"
+            },
+            "name" : "Det_PRODUCTID",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 2048,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "Det_PRODUCTNAME"
+            },
+            "name" : "Det_PRODUCTNAME",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 2048,
+            "scale" : 0
+          }
+        ],
+        "dataAdapter" : {
+          "connectionId" : "saas:@8RvqGoHyhvniQWk7Wazgkc",
+          "connectionName" : "Snowflake_retail_cpg",
+          "excludeDynamicFileNameField" : "false",
+          "objectType" : "SINGLE",
+          "typeSystem" : "TOOLKIT",
+          "useDynamicFileName" : "false",
+          "object" : {
+            "name" : "RETAIL_CPG/PUBLIC/DEMO_CDC_TOT_PROD_REVENUE_RAD",
+            "label" : "RETAIL_CPG/PUBLIC/DEMO_CDC_TOT_PROD_REVENUE_RAD",
+            "path" : "RETAIL_CPG/PUBLIC/DEMO_CDC_TOT_PROD_REVENUE_RAD",
+            "retainMetadata" : "false",
+            "fields" : [
+              {
+                "name" : "RANKINDEX",
+                "fieldType" : "CONNECTOR",
+                "label" : "RANKINDEX",
+                "nativeName" : "RANKINDEX",
+                "nativeType" : "number",
+                "original" : "false",
+                "precision" : 10,
+                "scale" : 0,
+                "metaExtensions" : [
+                  {
+                    "name" : "isNullable",
+                    "value" : "true"
+                  }
+                ],
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "DEMO_CDC_TOT_PROD_REVENUE_RAD"
+                  }
+                ]
+              },
+              {
+                "name" : "TOT_PROD_REVENUE",
+                "fieldType" : "CONNECTOR",
+                "label" : "TOT_PROD_REVENUE",
+                "nativeName" : "TOT_PROD_REVENUE",
+                "nativeType" : "number",
+                "original" : "false",
+                "precision" : 15,
+                "scale" : 2,
+                "metaExtensions" : [
+                  {
+                    "name" : "isNullable",
+                    "value" : "true"
+                  }
+                ],
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "DEMO_CDC_TOT_PROD_REVENUE_RAD"
+                  }
+                ]
+              },
+              {
+                "name" : "Det_PRODUCTID",
+                "fieldType" : "CONNECTOR",
+                "label" : "PRODUCTID",
+                "nativeName" : "PRODUCTID",
+                "nativeType" : "varchar",
+                "original" : "false",
+                "precision" : 2048,
+                "scale" : 0,
+                "metaExtensions" : [
+                  {
+                    "name" : "isNullable",
+                    "value" : "true"
+                  }
+                ],
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "DEMO_CDC_TOT_PROD_REVENUE_RAD"
+                  }
+                ]
+              },
+              {
+                "name" : "Det_PRODUCTNAME",
+                "fieldType" : "CONNECTOR",
+                "label" : "PRODUCTNAME",
+                "nativeName" : "PRODUCTNAME",
+                "nativeType" : "varchar",
+                "original" : "false",
+                "precision" : 2048,
+                "scale" : 0,
+                "metaExtensions" : [
+                  {
+                    "name" : "isNullable",
+                    "value" : "true"
+                  }
+                ],
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "DEMO_CDC_TOT_PROD_REVENUE_RAD"
+                  }
+                ]
+              }
+            ],
+            "objectAttributes" : [
+              {
+                "name" : "tableFormat",
+                "value" : "Standard Table"
+              },
+              {
+                "name" : "parent",
+                "value" : "RETAIL_CPG/PUBLIC"
+              }
+            ]
+          },
+          "writeOptions" : {
+            "batchSize" : 0,
+            "bulkApi" : "false",
+            "handleDecimalRoundOff" : "false",
+            "handleSpecialChars" : "false",
+            "operations" : [
+              "Insert"
+            ],
+            "setFieldsToNull" : "false",
+            "truncate" : "false",
+            "useErrorFile" : "false",
+            "useExactSrcNames" : "false",
+            "useSuccessFile" : "false",
+            "tgtObjectAttributes" : [
+              {
+                "name" : "tableFormat",
+                "value" : "Standard Table"
+              },
+              {
+                "name" : "parent",
+                "value" : "RETAIL_CPG/PUBLIC"
+              }
+            ]
+          }
+        }
+      },
+      {
+        "createTime" : "2025-07-17T14:59:01.355Z",
+        "name" : "Src_Suppliers_Sflk",
+        "groups" : [
+          {
+            "input" : "false",
+            "name" : "DefaultGroup",
+            "output" : "true"
+          }
+        ],
+        "generateFilenamePort" : "false",
+        "useLabels" : "false",
+        "useSequenceFields" : "false",
+        "fields" : [
+          {
+            "adapterField" : {
+              "name" : "SUPPLIERID"
+            },
+            "name" : "SUPPLIERID",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 2048,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "SUPPLIERNAME"
+            },
+            "name" : "SUPPLIERNAME",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 2048,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "CONTACTEMAIL"
+            },
+            "name" : "CONTACTEMAIL",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 2048,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "SUPPLIERADDRESS"
+            },
+            "name" : "SUPPLIERADDRESS",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 2048,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "SUPPLIERCITY"
+            },
+            "name" : "SUPPLIERCITY",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 2048,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "SUPPLIERZIP"
+            },
+            "name" : "SUPPLIERZIP",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 2048,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "SUPPLIERCOUNTRY"
+            },
+            "name" : "SUPPLIERCOUNTRY",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 2048,
+            "scale" : 0
+          }
+        ],
+        "dataAdapter" : {
+          "connectionId" : "saas:@8RvqGoHyhvniQWk7Wazgkc",
+          "connectionName" : "Snowflake_retail_cpg",
+          "excludeDynamicFileNameField" : "false",
+          "objectType" : "SINGLE",
+          "typeSystem" : "TOOLKIT",
+          "useDynamicFileName" : "false",
+          "object" : {
+            "name" : "RETAIL_CPG/PUBLIC/RAD_Suppliers",
+            "label" : "RETAIL_CPG/PUBLIC/RAD_Suppliers",
+            "objectName" : "RAD_Suppliers",
+            "objectType" : "table",
+            "path" : "RETAIL_CPG/PUBLIC/RAD_Suppliers",
+            "retainMetadata" : "false",
+            "fields" : [
+              {
+                "name" : "SUPPLIERID",
+                "fieldType" : "CONNECTOR",
+                "label" : "SUPPLIERID",
+                "nativeName" : "SUPPLIERID",
+                "nativeType" : "varchar",
+                "original" : "false",
+                "precision" : 2048,
+                "scale" : 0,
+                "metaExtensions" : [
+                  {
+                    "name" : "isNullable",
+                    "value" : "true"
+                  }
+                ],
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "RAD_Suppliers"
+                  }
+                ]
+              },
+              {
+                "name" : "SUPPLIERNAME",
+                "fieldType" : "CONNECTOR",
+                "label" : "SUPPLIERNAME",
+                "nativeName" : "SUPPLIERNAME",
+                "nativeType" : "varchar",
+                "original" : "false",
+                "precision" : 2048,
+                "scale" : 0,
+                "metaExtensions" : [
+                  {
+                    "name" : "isNullable",
+                    "value" : "true"
+                  }
+                ],
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "RAD_Suppliers"
+                  }
+                ]
+              },
+              {
+                "name" : "CONTACTEMAIL",
+                "fieldType" : "CONNECTOR",
+                "label" : "CONTACTEMAIL",
+                "nativeName" : "CONTACTEMAIL",
+                "nativeType" : "varchar",
+                "original" : "false",
+                "precision" : 2048,
+                "scale" : 0,
+                "metaExtensions" : [
+                  {
+                    "name" : "isNullable",
+                    "value" : "true"
+                  }
+                ],
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "RAD_Suppliers"
+                  }
+                ]
+              },
+              {
+                "name" : "SUPPLIERADDRESS",
+                "fieldType" : "CONNECTOR",
+                "label" : "SUPPLIERADDRESS",
+                "nativeName" : "SUPPLIERADDRESS",
+                "nativeType" : "varchar",
+                "original" : "false",
+                "precision" : 2048,
+                "scale" : 0,
+                "metaExtensions" : [
+                  {
+                    "name" : "isNullable",
+                    "value" : "true"
+                  }
+                ],
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "RAD_Suppliers"
+                  }
+                ]
+              },
+              {
+                "name" : "SUPPLIERCITY",
+                "fieldType" : "CONNECTOR",
+                "label" : "SUPPLIERCITY",
+                "nativeName" : "SUPPLIERCITY",
+                "nativeType" : "varchar",
+                "original" : "false",
+                "precision" : 2048,
+                "scale" : 0,
+                "metaExtensions" : [
+                  {
+                    "name" : "isNullable",
+                    "value" : "true"
+                  }
+                ],
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "RAD_Suppliers"
+                  }
+                ]
+              },
+              {
+                "name" : "SUPPLIERZIP",
+                "fieldType" : "CONNECTOR",
+                "label" : "SUPPLIERZIP",
+                "nativeName" : "SUPPLIERZIP",
+                "nativeType" : "varchar",
+                "original" : "false",
+                "precision" : 2048,
+                "scale" : 0,
+                "metaExtensions" : [
+                  {
+                    "name" : "isNullable",
+                    "value" : "true"
+                  }
+                ],
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "RAD_Suppliers"
+                  }
+                ]
+              },
+              {
+                "name" : "SUPPLIERCOUNTRY",
+                "fieldType" : "CONNECTOR",
+                "label" : "SUPPLIERCOUNTRY",
+                "nativeName" : "SUPPLIERCOUNTRY",
+                "nativeType" : "varchar",
+                "original" : "false",
+                "precision" : 2048,
+                "scale" : 0,
+                "metaExtensions" : [
+                  {
+                    "name" : "isNullable",
+                    "value" : "true"
+                  }
+                ],
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "RAD_Suppliers"
+                  }
+                ]
+              }
+            ],
+            "objectAttributes" : [
+              {
+                "name" : "tableType",
+                "value" : "TABLE"
+              },
+              {
+                "name" : "storageSerPol",
+                "value" : "Optimized"
+              },
+              {
+                "name" : "tableFormat",
+                "value" : "Standard Table"
+              }
+            ]
+          },
+          "readOptions" : {
+            "commandType" : 0,
+            "descending" : "false",
+            "queryAll" : "false",
+            "rowLimit" : 0,
+            "selectDistinct" : "false"
+          }
+        }
+      },
+      {
+        "createTime" : "2025-07-17T14:59:41.600Z",
+        "name" : "Joiner2",
+        "groups" : [
+          {
+            "input" : "true",
+            "name" : "Master",
+            "output" : "false",
+            "rules" : [
+              {
+                "bulkRename" : "false",
+                "include" : "true"
+              }
+            ]
+          },
+          {
+            "input" : "true",
+            "name" : "Detail",
+            "output" : "false",
+            "rules" : [
+              {
+                "bulkRename" : "false",
+                "include" : "true"
+              }
+            ]
+          },
+          {
+            "input" : "false",
+            "name" : "OutputGroup",
+            "output" : "true"
+          }
+        ],
+        "joinType" : "Normal Join",
+        "joinConditions" : [
+          {
+            "leftOperand" : "Det_SUPPLIERID",
+            "operator" : "=",
+            "rightOperand" : "SUPPLIERID"
+          }
+        ]
+      },
+      {
+        "createTime" : "2025-07-17T15:02:22.661Z",
+        "name" : "Aggregator2",
+        "groups" : [
+          {
+            "input" : "true",
+            "name" : "DefaultGroup",
+            "output" : "true",
+            "rules" : [
+              {
+                "bulkRename" : "false",
+                "include" : "true"
+              }
+            ]
+          }
+        ],
+        "fields" : [
+          {
+            "name" : "TOT_SUPP_REVENUE",
+            "platformType" : {
+              "name" : "decimal"
+            },
+            "precision" : 15,
+            "scale" : 2,
+            "expFieldType" : "OUTPUT",
+            "expression" : "TO_NUMBER(QUANTITY)*NUM_PRICEPERUNIT"
+          }
+        ],
+        "groupByFieldsList" : {
+          "fields" : [
+            {
+              "fieldName" : "SUPPLIERID"
+            }
+          ]
+        }
+      },
+      {
+        "createTime" : "2025-07-17T15:32:31.639Z",
+        "name" : "Top_10_Suppliers",
+        "groups" : [
+          {
+            "input" : "true",
+            "name" : "DefaultGroup",
+            "output" : "true",
+            "rules" : [
+              {
+                "bulkRename" : "false",
+                "include" : "true",
+                "names" : [
+                  {
+                    "inputName" : "SUPPLIERID"
+                  },
+                  {
+                    "inputName" : "SUPPLIERNAME"
+                  },
+                  {
+                    "inputName" : "TOT_SUPP_REVENUE"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "numOfRows" : 10,
+        "rankField" : "TOT_SUPP_REVENUE",
+        "isTop" : "true"
+      },
+      {
+        "createTime" : "2025-07-17T15:33:16.038Z",
+        "name" : "Tgt_Supp_Revenue_Snowflake",
+        "groups" : [
+          {
+            "input" : "true",
+            "name" : "DefaultGroup",
+            "output" : "false",
+            "rules" : [
+              {
+                "bulkRename" : "false",
+                "include" : "true"
+              }
+            ]
+          }
+        ],
+        "createTarget" : "true",
+        "fieldMappingMode" : "BY_NAME",
+        "inputSorted" : "false",
+        "schemaProviderType" : "SELECTED_OBJECT",
+        "targetFieldsOrdered" : "false",
+        "updateColumns" : null,
+        "useLabels" : "false",
+        "useSequenceFields" : "false",
+        "fields" : [
+          {
+            "adapterField" : {
+              "name" : "RANKINDEX"
+            },
+            "name" : "RANKINDEX",
+            "platformType" : {
+              "name" : "integer"
+            },
+            "precision" : 10,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "TOT_SUPP_REVENUE"
+            },
+            "name" : "TOT_SUPP_REVENUE",
+            "platformType" : {
+              "name" : "decimal"
+            },
+            "precision" : 15,
+            "scale" : 2
+          },
+          {
+            "adapterField" : {
+              "name" : "SUPPLIERID"
+            },
+            "name" : "SUPPLIERID",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 2048,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "SUPPLIERNAME"
+            },
+            "name" : "SUPPLIERNAME",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 2048,
+            "scale" : 0
+          }
+        ],
+        "dataAdapter" : {
+          "connectionId" : "saas:@8RvqGoHyhvniQWk7Wazgkc",
+          "connectionName" : "Snowflake_retail_cpg",
+          "excludeDynamicFileNameField" : "false",
+          "objectType" : "SINGLE",
+          "typeSystem" : "TOOLKIT",
+          "useDynamicFileName" : "false",
+          "object" : {
+            "name" : "RETAIL_CPG/PUBLIC/DEMO_CDC_TOT_SUPPL_REVENUE_RAD",
+            "label" : "RETAIL_CPG/PUBLIC/DEMO_CDC_TOT_SUPPL_REVENUE_RAD",
+            "path" : "RETAIL_CPG/PUBLIC/DEMO_CDC_TOT_SUPPL_REVENUE_RAD",
+            "retainMetadata" : "false",
+            "fields" : [
+              {
+                "name" : "RANKINDEX",
+                "fieldType" : "CONNECTOR",
+                "label" : "RANKINDEX",
+                "nativeName" : "RANKINDEX",
+                "nativeType" : "number",
+                "original" : "false",
+                "precision" : 10,
+                "scale" : 0,
+                "metaExtensions" : [
+                  {
+                    "name" : "isNullable",
+                    "value" : "true"
+                  }
+                ],
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "DEMO_CDC_TOT_SUPPL_REVENUE_RAD"
+                  }
+                ]
+              },
+              {
+                "name" : "TOT_SUPP_REVENUE",
+                "fieldType" : "CONNECTOR",
+                "label" : "TOT_SUPP_REVENUE",
+                "nativeName" : "TOT_SUPP_REVENUE",
+                "nativeType" : "number",
+                "original" : "false",
+                "precision" : 15,
+                "scale" : 2,
+                "metaExtensions" : [
+                  {
+                    "name" : "isNullable",
+                    "value" : "true"
+                  }
+                ],
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "DEMO_CDC_TOT_SUPPL_REVENUE_RAD"
+                  }
+                ]
+              },
+              {
+                "name" : "SUPPLIERID",
+                "fieldType" : "CONNECTOR",
+                "label" : "SUPPLIERID",
+                "nativeName" : "SUPPLIERID",
+                "nativeType" : "varchar",
+                "original" : "false",
+                "precision" : 2048,
+                "scale" : 0,
+                "metaExtensions" : [
+                  {
+                    "name" : "isNullable",
+                    "value" : "true"
+                  }
+                ],
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "DEMO_CDC_TOT_SUPPL_REVENUE_RAD"
+                  }
+                ]
+              },
+              {
+                "name" : "SUPPLIERNAME",
+                "fieldType" : "CONNECTOR",
+                "label" : "SUPPLIERNAME",
+                "nativeName" : "SUPPLIERNAME",
+                "nativeType" : "varchar",
+                "original" : "false",
+                "precision" : 2048,
+                "scale" : 0,
+                "metaExtensions" : [
+                  {
+                    "name" : "isNullable",
+                    "value" : "true"
+                  }
+                ],
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "DEMO_CDC_TOT_SUPPL_REVENUE_RAD"
+                  }
+                ]
+              }
+            ],
+            "objectAttributes" : [
+              {
+                "name" : "tableFormat",
+                "value" : "Standard Table"
+              },
+              {
+                "name" : "parent",
+                "value" : "RETAIL_CPG/PUBLIC"
+              }
+            ]
+          },
+          "writeOptions" : {
+            "batchSize" : 0,
+            "bulkApi" : "false",
+            "handleDecimalRoundOff" : "false",
+            "handleSpecialChars" : "false",
+            "operations" : [
+              "Insert"
+            ],
+            "setFieldsToNull" : "false",
+            "truncate" : "false",
+            "useErrorFile" : "false",
+            "useExactSrcNames" : "false",
+            "useSuccessFile" : "false",
+            "tgtObjectAttributes" : [
+              {
+                "name" : "tableFormat",
+                "value" : "Standard Table"
+              },
+              {
+                "name" : "parent",
+                "value" : "RETAIL_CPG/PUBLIC"
+              }
+            ]
+          }
+        }
+      }
+    ]
+  },
+  "vcsExportTime" : "2025-09-09 17:00:41 PDT"
+}

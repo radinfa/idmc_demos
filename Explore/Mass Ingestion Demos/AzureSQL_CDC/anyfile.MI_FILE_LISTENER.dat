@@ -1,0 +1,57 @@
+{
+  "orgId" : "jCFocTnokCvlzNdKrgHCQL",
+  "icsGuid" : "6wdneMJjzfajJYUho5G2qN",
+  "name" : "anyfile",
+  "id" : 10813,
+  "type" : "FILE",
+  "description" : "",
+  "status" : "ENABLE",
+  "agentGroup" : "010VEL25000000000002",
+  "connection" : {
+    "type" : "local",
+    "name" : "",
+    "connId" : ""
+  },
+  "rules" : [ {
+    "id" : 12214,
+    "folderPath" : "/",
+    "filePattern" : "*",
+    "postAction" : "NONE",
+    "patternType" : "wildcard",
+    "recursive" : false,
+    "mandatory" : false
+  } ],
+  "eventListenerRules" : null,
+  "triggerDefinition" : {
+    "type" : "DAILY_WITH_INTERVAL",
+    "timezone" : "America/Los_Angeles",
+    "startDate" : "20250907",
+    "endDate" : "20250907",
+    "runIndefinitely" : false,
+    "startsAt" : "0000",
+    "endsAt" : "2355",
+    "frequency" : 15,
+    "frequencyUnit" : "SECONDS",
+    "daysToRun" : null,
+    "monthlyMode" : null,
+    "dayOfMonth" : null,
+    "weekOfMonth" : null,
+    "dayOfWeek" : null
+  },
+  "stopWhenRulesMet" : false,
+  "fileStabilityType" : "SECONDARY_SNAPSHOT",
+  "stabilityCheckInterval" : 10,
+  "notifyExistingFiles" : false,
+  "lastModified" : 1757304160000,
+  "job" : "",
+  "schedule" : "",
+  "listenerEvents" : {
+    "arrive" : true,
+    "update" : false,
+    "delete" : false
+  },
+  "emailIds" : null,
+  "continueOnError" : false,
+  "filesInScheduleInterval" : false,
+  "identifier" : "10813"
+}

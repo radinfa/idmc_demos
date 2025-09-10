@@ -1,0 +1,1270 @@
+{
+  "content" : {
+    "allowMaxFieldLength" : "false",
+    "bigIntConvertType" : "ONLY_BIGINT",
+    "documentType" : "MAPPING",
+    "name" : "m_read_radoracle_to_AzureSQLSales",
+    "specialCharacterSupport" : "false",
+    "links" : [
+      {
+        "link" : "Src_radoracle_orders -> Target"
+      },
+      {
+        "link" : "Src_radoracle_customers -> Target1"
+      },
+      {
+        "link" : "Src_radoracle_products -> Tgtproducts"
+      },
+      {
+        "link" : "Src_radoracle_suppliers -> Target2"
+      }
+    ],
+    "transformations" : [
+      {
+        "createTime" : "2025-08-25T21:21:47.099Z",
+        "name" : "Src_radoracle_orders",
+        "advancedProperties" : [
+          {
+            "name" : "Tracing Level",
+            "value" : "Normal"
+          },
+          {
+            "name" : "Output is deterministic",
+            "value" : "false"
+          }
+        ],
+        "groups" : [
+          {
+            "input" : "false",
+            "name" : "DefaultGroup",
+            "output" : "true"
+          }
+        ],
+        "generateFilenamePort" : "false",
+        "useLabels" : "false",
+        "useSequenceFields" : "false",
+        "fields" : [
+          {
+            "adapterField" : {
+              "name" : "ORDERID"
+            },
+            "name" : "ORDERID",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 512,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "CUSTOMERID"
+            },
+            "name" : "CUSTOMERID",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 512,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "PRODUCTID"
+            },
+            "name" : "PRODUCTID",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 512,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "ORDERDATE"
+            },
+            "name" : "ORDERDATE",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 512,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "QUANTITY"
+            },
+            "name" : "QUANTITY",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 512,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "PRICEPERUNIT"
+            },
+            "name" : "PRICEPERUNIT",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 512,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "TOTALPRICE"
+            },
+            "name" : "TOTALPRICE",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 512,
+            "scale" : 0
+          }
+        ],
+        "dataAdapter" : {
+          "connectionId" : "saas:@dionn7asPwPjZihYYLURQQ",
+          "connectionName" : "RAD_ORACLE_CDI",
+          "excludeDynamicFileNameField" : "false",
+          "objectType" : "SINGLE",
+          "typeSystem" : "Oracle",
+          "useDynamicFileName" : "false",
+          "object" : {
+            "name" : "ADMIN/NEW_ORDERS_RAD",
+            "dbSchema" : "ADMIN",
+            "label" : "NEW_ORDERS_RAD",
+            "objectName" : "NEW_ORDERS_RAD",
+            "path" : "ADMIN/NEW_ORDERS_RAD",
+            "retainMetadata" : "false",
+            "fields" : [
+              {
+                "name" : "ORDERID",
+                "fieldType" : "CONNECTOR",
+                "label" : "ORDERID",
+                "nativeName" : "ORDERID",
+                "nativeType" : "nvarchar",
+                "original" : "false",
+                "precision" : 512,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "ADMIN/NEW_ORDERS_RAD"
+                  }
+                ]
+              },
+              {
+                "name" : "CUSTOMERID",
+                "fieldType" : "CONNECTOR",
+                "label" : "CUSTOMERID",
+                "nativeName" : "CUSTOMERID",
+                "nativeType" : "nvarchar",
+                "original" : "false",
+                "precision" : 512,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "ADMIN/NEW_ORDERS_RAD"
+                  }
+                ]
+              },
+              {
+                "name" : "PRODUCTID",
+                "fieldType" : "CONNECTOR",
+                "label" : "PRODUCTID",
+                "nativeName" : "PRODUCTID",
+                "nativeType" : "nvarchar",
+                "original" : "false",
+                "precision" : 512,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "ADMIN/NEW_ORDERS_RAD"
+                  }
+                ]
+              },
+              {
+                "name" : "ORDERDATE",
+                "fieldType" : "CONNECTOR",
+                "label" : "ORDERDATE",
+                "nativeName" : "ORDERDATE",
+                "nativeType" : "nvarchar",
+                "original" : "false",
+                "precision" : 512,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "ADMIN/NEW_ORDERS_RAD"
+                  }
+                ]
+              },
+              {
+                "name" : "QUANTITY",
+                "fieldType" : "CONNECTOR",
+                "label" : "QUANTITY",
+                "nativeName" : "QUANTITY",
+                "nativeType" : "nvarchar",
+                "original" : "false",
+                "precision" : 512,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "ADMIN/NEW_ORDERS_RAD"
+                  }
+                ]
+              },
+              {
+                "name" : "PRICEPERUNIT",
+                "fieldType" : "CONNECTOR",
+                "label" : "PRICEPERUNIT",
+                "nativeName" : "PRICEPERUNIT",
+                "nativeType" : "nvarchar",
+                "original" : "false",
+                "precision" : 512,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "ADMIN/NEW_ORDERS_RAD"
+                  }
+                ]
+              },
+              {
+                "name" : "TOTALPRICE",
+                "fieldType" : "CONNECTOR",
+                "label" : "TOTALPRICE",
+                "nativeName" : "TOTALPRICE",
+                "nativeType" : "nvarchar",
+                "original" : "false",
+                "precision" : 512,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "ADMIN/NEW_ORDERS_RAD"
+                  }
+                ]
+              }
+            ]
+          },
+          "readOptions" : {
+            "commandType" : 0,
+            "descending" : "false",
+            "queryAll" : "false",
+            "rowLimit" : 0,
+            "selectDistinct" : "false"
+          }
+        }
+      },
+      {
+        "createTime" : "2025-08-25T21:21:47.099Z",
+        "name" : "Target",
+        "advancedProperties" : [
+          {
+            "name" : "Forward Rejected Rows",
+            "value" : "true"
+          }
+        ],
+        "groups" : [
+          {
+            "input" : "true",
+            "name" : "DefaultGroup",
+            "output" : "false",
+            "rules" : [
+              {
+                "bulkRename" : "false",
+                "include" : "true"
+              }
+            ]
+          }
+        ],
+        "createTarget" : "true",
+        "fieldMappingMode" : "BY_NAME",
+        "inputSorted" : "false",
+        "schemaProviderType" : "SELECTED_OBJECT",
+        "targetFieldsOrdered" : "false",
+        "updateColumns" : null,
+        "useLabels" : "false",
+        "useSequenceFields" : "false",
+        "dataAdapter" : {
+          "connectionId" : "saas:@fK7dS9WxpwifwaD1lHmxi0",
+          "connectionName" : "AzureSQL for CDI",
+          "excludeDynamicFileNameField" : "false",
+          "objectType" : "SINGLE",
+          "typeSystem" : "SqlServer",
+          "useDynamicFileName" : "false",
+          "bulkOptions" : {
+            "hardDelete" : "false",
+            "maxRowsPerRequest" : 0,
+            "monitorBulk" : "false",
+            "monitorBulkV2" : "false",
+            "pkChunkingEnabled" : "false",
+            "pkChunkingSize" : 0,
+            "serialMode" : "false",
+            "useBulkApi" : "false",
+            "useBulkApiV2" : "false"
+          },
+          "object" : {
+            "name" : "Sales/Orders",
+            "dbSchema" : "Sales",
+            "label" : "Orders",
+            "path" : "Sales/Orders",
+            "retainMetadata" : "false"
+          },
+          "writeOptions" : {
+            "batchSize" : 0,
+            "bulkApi" : "false",
+            "handleDecimalRoundOff" : "false",
+            "handleSpecialChars" : "false",
+            "operations" : [
+              "Insert"
+            ],
+            "setFieldsToNull" : "false",
+            "truncate" : "true",
+            "useErrorFile" : "false",
+            "useExactSrcNames" : "false",
+            "useSuccessFile" : "false"
+          }
+        }
+      },
+      {
+        "createTime" : "2025-08-25T21:25:37.716Z",
+        "name" : "Src_radoracle_customers",
+        "advancedProperties" : [
+          {
+            "name" : "Tracing Level",
+            "value" : "Normal"
+          },
+          {
+            "name" : "Output is deterministic",
+            "value" : "false"
+          }
+        ],
+        "groups" : [
+          {
+            "input" : "false",
+            "name" : "DefaultGroup",
+            "output" : "true"
+          }
+        ],
+        "generateFilenamePort" : "false",
+        "useLabels" : "false",
+        "useSequenceFields" : "false",
+        "fields" : [
+          {
+            "adapterField" : {
+              "name" : "CUSTOMERID"
+            },
+            "name" : "CUSTOMERID",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 512,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "FIRSTNAME"
+            },
+            "name" : "FIRSTNAME",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 512,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "LASTNAME"
+            },
+            "name" : "LASTNAME",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 512,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "EMAIL"
+            },
+            "name" : "EMAIL",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 512,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "CUSTADDRESS"
+            },
+            "name" : "CUSTADDRESS",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 512,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "CUSTCITY"
+            },
+            "name" : "CUSTCITY",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 512,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "CUSTZIP"
+            },
+            "name" : "CUSTZIP",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 512,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "CUSTCOUNTRY"
+            },
+            "name" : "CUSTCOUNTRY",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 512,
+            "scale" : 0
+          }
+        ],
+        "dataAdapter" : {
+          "connectionId" : "saas:@dionn7asPwPjZihYYLURQQ",
+          "connectionName" : "RAD_ORACLE_CDI",
+          "excludeDynamicFileNameField" : "false",
+          "objectType" : "SINGLE",
+          "typeSystem" : "Oracle",
+          "useDynamicFileName" : "false",
+          "object" : {
+            "name" : "ADMIN/NEW_CUSTOMERS_RAD",
+            "dbSchema" : "ADMIN",
+            "label" : "NEW_CUSTOMERS_RAD",
+            "objectName" : "NEW_CUSTOMERS_RAD",
+            "path" : "ADMIN/NEW_CUSTOMERS_RAD",
+            "retainMetadata" : "false",
+            "fields" : [
+              {
+                "name" : "CUSTOMERID",
+                "fieldType" : "CONNECTOR",
+                "label" : "CUSTOMERID",
+                "nativeName" : "CUSTOMERID",
+                "nativeType" : "nvarchar",
+                "original" : "false",
+                "precision" : 512,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "ADMIN/NEW_CUSTOMERS_RAD"
+                  }
+                ]
+              },
+              {
+                "name" : "FIRSTNAME",
+                "fieldType" : "CONNECTOR",
+                "label" : "FIRSTNAME",
+                "nativeName" : "FIRSTNAME",
+                "nativeType" : "nvarchar",
+                "original" : "false",
+                "precision" : 512,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "ADMIN/NEW_CUSTOMERS_RAD"
+                  }
+                ]
+              },
+              {
+                "name" : "LASTNAME",
+                "fieldType" : "CONNECTOR",
+                "label" : "LASTNAME",
+                "nativeName" : "LASTNAME",
+                "nativeType" : "nvarchar",
+                "original" : "false",
+                "precision" : 512,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "ADMIN/NEW_CUSTOMERS_RAD"
+                  }
+                ]
+              },
+              {
+                "name" : "EMAIL",
+                "fieldType" : "CONNECTOR",
+                "label" : "EMAIL",
+                "nativeName" : "EMAIL",
+                "nativeType" : "nvarchar",
+                "original" : "false",
+                "precision" : 512,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "ADMIN/NEW_CUSTOMERS_RAD"
+                  }
+                ]
+              },
+              {
+                "name" : "CUSTADDRESS",
+                "fieldType" : "CONNECTOR",
+                "label" : "CUSTADDRESS",
+                "nativeName" : "CUSTADDRESS",
+                "nativeType" : "nvarchar",
+                "original" : "false",
+                "precision" : 512,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "ADMIN/NEW_CUSTOMERS_RAD"
+                  }
+                ]
+              },
+              {
+                "name" : "CUSTCITY",
+                "fieldType" : "CONNECTOR",
+                "label" : "CUSTCITY",
+                "nativeName" : "CUSTCITY",
+                "nativeType" : "nvarchar",
+                "original" : "false",
+                "precision" : 512,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "ADMIN/NEW_CUSTOMERS_RAD"
+                  }
+                ]
+              },
+              {
+                "name" : "CUSTZIP",
+                "fieldType" : "CONNECTOR",
+                "label" : "CUSTZIP",
+                "nativeName" : "CUSTZIP",
+                "nativeType" : "nvarchar",
+                "original" : "false",
+                "precision" : 512,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "ADMIN/NEW_CUSTOMERS_RAD"
+                  }
+                ]
+              },
+              {
+                "name" : "CUSTCOUNTRY",
+                "fieldType" : "CONNECTOR",
+                "label" : "CUSTCOUNTRY",
+                "nativeName" : "CUSTCOUNTRY",
+                "nativeType" : "nvarchar",
+                "original" : "false",
+                "precision" : 512,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "ADMIN/NEW_CUSTOMERS_RAD"
+                  }
+                ]
+              }
+            ]
+          },
+          "readOptions" : {
+            "commandType" : 0,
+            "descending" : "false",
+            "queryAll" : "false",
+            "rowLimit" : 0,
+            "selectDistinct" : "false"
+          }
+        }
+      },
+      {
+        "createTime" : "2025-08-25T21:26:15.130Z",
+        "name" : "Target1",
+        "advancedProperties" : [
+          {
+            "name" : "Forward Rejected Rows",
+            "value" : "true"
+          }
+        ],
+        "groups" : [
+          {
+            "input" : "true",
+            "name" : "DefaultGroup",
+            "output" : "false",
+            "rules" : [
+              {
+                "bulkRename" : "false",
+                "include" : "true"
+              }
+            ]
+          }
+        ],
+        "createTarget" : "true",
+        "fieldMappingMode" : "BY_NAME",
+        "inputSorted" : "false",
+        "schemaProviderType" : "SELECTED_OBJECT",
+        "targetFieldsOrdered" : "false",
+        "updateColumns" : null,
+        "useLabels" : "false",
+        "useSequenceFields" : "false",
+        "dataAdapter" : {
+          "connectionId" : "saas:@fK7dS9WxpwifwaD1lHmxi0",
+          "connectionName" : "AzureSQL for CDI",
+          "excludeDynamicFileNameField" : "false",
+          "objectType" : "SINGLE",
+          "typeSystem" : "SqlServer",
+          "useDynamicFileName" : "false",
+          "bulkOptions" : {
+            "hardDelete" : "false",
+            "maxRowsPerRequest" : 0,
+            "monitorBulk" : "false",
+            "monitorBulkV2" : "false",
+            "pkChunkingEnabled" : "false",
+            "pkChunkingSize" : 0,
+            "serialMode" : "false",
+            "useBulkApi" : "false",
+            "useBulkApiV2" : "false"
+          },
+          "object" : {
+            "name" : "Sales/Customers",
+            "dbSchema" : "Sales",
+            "label" : "Customers",
+            "path" : "Sales/Customers",
+            "retainMetadata" : "false"
+          },
+          "writeOptions" : {
+            "batchSize" : 0,
+            "bulkApi" : "false",
+            "handleDecimalRoundOff" : "false",
+            "handleSpecialChars" : "false",
+            "operations" : [
+              "Insert"
+            ],
+            "setFieldsToNull" : "false",
+            "truncate" : "true",
+            "useErrorFile" : "false",
+            "useExactSrcNames" : "false",
+            "useSuccessFile" : "false"
+          }
+        }
+      },
+      {
+        "createTime" : "2025-08-25T21:26:38.344Z",
+        "name" : "Src_radoracle_products",
+        "advancedProperties" : [
+          {
+            "name" : "Tracing Level",
+            "value" : "Normal"
+          },
+          {
+            "name" : "Output is deterministic",
+            "value" : "false"
+          }
+        ],
+        "groups" : [
+          {
+            "input" : "false",
+            "name" : "DefaultGroup",
+            "output" : "true"
+          }
+        ],
+        "generateFilenamePort" : "false",
+        "useLabels" : "false",
+        "useSequenceFields" : "false",
+        "fields" : [
+          {
+            "adapterField" : {
+              "name" : "PRODUCTID"
+            },
+            "name" : "PRODUCTID",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 512,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "PRODUCTNAME"
+            },
+            "name" : "PRODUCTNAME",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 512,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "CATEGORY"
+            },
+            "name" : "CATEGORY",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 512,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "PRICE"
+            },
+            "name" : "PRICE",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 512,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "INVENTORYLEVEL"
+            },
+            "name" : "INVENTORYLEVEL",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 512,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "SUPPLIERID"
+            },
+            "name" : "SUPPLIERID",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 512,
+            "scale" : 0
+          }
+        ],
+        "dataAdapter" : {
+          "connectionId" : "saas:@dionn7asPwPjZihYYLURQQ",
+          "connectionName" : "RAD_ORACLE_CDI",
+          "excludeDynamicFileNameField" : "false",
+          "objectType" : "SINGLE",
+          "typeSystem" : "Oracle",
+          "useDynamicFileName" : "false",
+          "object" : {
+            "name" : "ADMIN/NEW_PRODUCTS_RAD",
+            "dbSchema" : "ADMIN",
+            "label" : "NEW_PRODUCTS_RAD",
+            "objectName" : "NEW_PRODUCTS_RAD",
+            "path" : "ADMIN/NEW_PRODUCTS_RAD",
+            "retainMetadata" : "false",
+            "fields" : [
+              {
+                "name" : "PRODUCTID",
+                "fieldType" : "CONNECTOR",
+                "label" : "PRODUCTID",
+                "nativeName" : "PRODUCTID",
+                "nativeType" : "nvarchar",
+                "original" : "false",
+                "precision" : 512,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "ADMIN/NEW_PRODUCTS_RAD"
+                  }
+                ]
+              },
+              {
+                "name" : "PRODUCTNAME",
+                "fieldType" : "CONNECTOR",
+                "label" : "PRODUCTNAME",
+                "nativeName" : "PRODUCTNAME",
+                "nativeType" : "nvarchar",
+                "original" : "false",
+                "precision" : 512,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "ADMIN/NEW_PRODUCTS_RAD"
+                  }
+                ]
+              },
+              {
+                "name" : "CATEGORY",
+                "fieldType" : "CONNECTOR",
+                "label" : "CATEGORY",
+                "nativeName" : "CATEGORY",
+                "nativeType" : "nvarchar",
+                "original" : "false",
+                "precision" : 512,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "ADMIN/NEW_PRODUCTS_RAD"
+                  }
+                ]
+              },
+              {
+                "name" : "PRICE",
+                "fieldType" : "CONNECTOR",
+                "label" : "PRICE",
+                "nativeName" : "PRICE",
+                "nativeType" : "nvarchar",
+                "original" : "false",
+                "precision" : 512,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "ADMIN/NEW_PRODUCTS_RAD"
+                  }
+                ]
+              },
+              {
+                "name" : "INVENTORYLEVEL",
+                "fieldType" : "CONNECTOR",
+                "label" : "INVENTORYLEVEL",
+                "nativeName" : "INVENTORYLEVEL",
+                "nativeType" : "nvarchar",
+                "original" : "false",
+                "precision" : 512,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "ADMIN/NEW_PRODUCTS_RAD"
+                  }
+                ]
+              },
+              {
+                "name" : "SUPPLIERID",
+                "fieldType" : "CONNECTOR",
+                "label" : "SUPPLIERID",
+                "nativeName" : "SUPPLIERID",
+                "nativeType" : "nvarchar",
+                "original" : "false",
+                "precision" : 512,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "ADMIN/NEW_PRODUCTS_RAD"
+                  }
+                ]
+              }
+            ]
+          },
+          "readOptions" : {
+            "commandType" : 0,
+            "descending" : "false",
+            "queryAll" : "false",
+            "rowLimit" : 0,
+            "selectDistinct" : "false"
+          }
+        }
+      },
+      {
+        "createTime" : "2025-08-25T21:27:03.003Z",
+        "name" : "Tgtproducts",
+        "advancedProperties" : [
+          {
+            "name" : "Forward Rejected Rows",
+            "value" : "true"
+          }
+        ],
+        "groups" : [
+          {
+            "input" : "true",
+            "name" : "DefaultGroup",
+            "output" : "false",
+            "rules" : [
+              {
+                "bulkRename" : "false",
+                "include" : "true"
+              }
+            ]
+          }
+        ],
+        "createTarget" : "true",
+        "fieldMappingMode" : "BY_NAME",
+        "inputSorted" : "false",
+        "schemaProviderType" : "SELECTED_OBJECT",
+        "targetFieldsOrdered" : "false",
+        "updateColumns" : null,
+        "useLabels" : "false",
+        "useSequenceFields" : "false",
+        "dataAdapter" : {
+          "connectionId" : "saas:@fK7dS9WxpwifwaD1lHmxi0",
+          "connectionName" : "AzureSQL for CDI",
+          "excludeDynamicFileNameField" : "false",
+          "objectType" : "SINGLE",
+          "typeSystem" : "SqlServer",
+          "useDynamicFileName" : "false",
+          "bulkOptions" : {
+            "hardDelete" : "false",
+            "maxRowsPerRequest" : 0,
+            "monitorBulk" : "false",
+            "monitorBulkV2" : "false",
+            "pkChunkingEnabled" : "false",
+            "pkChunkingSize" : 0,
+            "serialMode" : "false",
+            "useBulkApi" : "false",
+            "useBulkApiV2" : "false"
+          },
+          "object" : {
+            "name" : "Sales/Products",
+            "dbSchema" : "Sales",
+            "label" : "Products",
+            "path" : "Sales/Products",
+            "retainMetadata" : "false"
+          },
+          "writeOptions" : {
+            "batchSize" : 0,
+            "bulkApi" : "false",
+            "handleDecimalRoundOff" : "false",
+            "handleSpecialChars" : "false",
+            "operations" : [
+              "Insert"
+            ],
+            "setFieldsToNull" : "false",
+            "truncate" : "true",
+            "useErrorFile" : "false",
+            "useExactSrcNames" : "false",
+            "useSuccessFile" : "false"
+          }
+        }
+      },
+      {
+        "createTime" : "2025-08-25T21:29:56.280Z",
+        "name" : "Src_radoracle_suppliers",
+        "advancedProperties" : [
+          {
+            "name" : "Tracing Level",
+            "value" : "Normal"
+          },
+          {
+            "name" : "Output is deterministic",
+            "value" : "false"
+          }
+        ],
+        "groups" : [
+          {
+            "input" : "false",
+            "name" : "DefaultGroup",
+            "output" : "true"
+          }
+        ],
+        "generateFilenamePort" : "false",
+        "useLabels" : "false",
+        "useSequenceFields" : "false",
+        "fields" : [
+          {
+            "adapterField" : {
+              "name" : "SUPPLIERID"
+            },
+            "name" : "SUPPLIERID",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 512,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "SUPPLIERNAME"
+            },
+            "name" : "SUPPLIERNAME",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 512,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "CONTACTEMAIL"
+            },
+            "name" : "CONTACTEMAIL",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 512,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "SUPPLIERADDRESS"
+            },
+            "name" : "SUPPLIERADDRESS",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 512,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "SUPPLIERCITY"
+            },
+            "name" : "SUPPLIERCITY",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 512,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "SUPPLIERZIP"
+            },
+            "name" : "SUPPLIERZIP",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 512,
+            "scale" : 0
+          },
+          {
+            "adapterField" : {
+              "name" : "SUPPLIERCOUNTRY"
+            },
+            "name" : "SUPPLIERCOUNTRY",
+            "platformType" : {
+              "name" : "string"
+            },
+            "precision" : 512,
+            "scale" : 0
+          }
+        ],
+        "dataAdapter" : {
+          "connectionId" : "saas:@dionn7asPwPjZihYYLURQQ",
+          "connectionName" : "RAD_ORACLE_CDI",
+          "excludeDynamicFileNameField" : "false",
+          "objectType" : "SINGLE",
+          "typeSystem" : "Oracle",
+          "useDynamicFileName" : "false",
+          "object" : {
+            "name" : "ADMIN/NEW_SUPPLIERS_RAD",
+            "dbSchema" : "ADMIN",
+            "label" : "NEW_SUPPLIERS_RAD",
+            "objectName" : "NEW_SUPPLIERS_RAD",
+            "path" : "ADMIN/NEW_SUPPLIERS_RAD",
+            "retainMetadata" : "false",
+            "fields" : [
+              {
+                "name" : "SUPPLIERID",
+                "fieldType" : "CONNECTOR",
+                "label" : "SUPPLIERID",
+                "nativeName" : "SUPPLIERID",
+                "nativeType" : "nvarchar",
+                "original" : "false",
+                "precision" : 512,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "ADMIN/NEW_SUPPLIERS_RAD"
+                  }
+                ]
+              },
+              {
+                "name" : "SUPPLIERNAME",
+                "fieldType" : "CONNECTOR",
+                "label" : "SUPPLIERNAME",
+                "nativeName" : "SUPPLIERNAME",
+                "nativeType" : "nvarchar",
+                "original" : "false",
+                "precision" : 512,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "ADMIN/NEW_SUPPLIERS_RAD"
+                  }
+                ]
+              },
+              {
+                "name" : "CONTACTEMAIL",
+                "fieldType" : "CONNECTOR",
+                "label" : "CONTACTEMAIL",
+                "nativeName" : "CONTACTEMAIL",
+                "nativeType" : "nvarchar",
+                "original" : "false",
+                "precision" : 512,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "ADMIN/NEW_SUPPLIERS_RAD"
+                  }
+                ]
+              },
+              {
+                "name" : "SUPPLIERADDRESS",
+                "fieldType" : "CONNECTOR",
+                "label" : "SUPPLIERADDRESS",
+                "nativeName" : "SUPPLIERADDRESS",
+                "nativeType" : "nvarchar",
+                "original" : "false",
+                "precision" : 512,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "ADMIN/NEW_SUPPLIERS_RAD"
+                  }
+                ]
+              },
+              {
+                "name" : "SUPPLIERCITY",
+                "fieldType" : "CONNECTOR",
+                "label" : "SUPPLIERCITY",
+                "nativeName" : "SUPPLIERCITY",
+                "nativeType" : "nvarchar",
+                "original" : "false",
+                "precision" : 512,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "ADMIN/NEW_SUPPLIERS_RAD"
+                  }
+                ]
+              },
+              {
+                "name" : "SUPPLIERZIP",
+                "fieldType" : "CONNECTOR",
+                "label" : "SUPPLIERZIP",
+                "nativeName" : "SUPPLIERZIP",
+                "nativeType" : "nvarchar",
+                "original" : "false",
+                "precision" : 512,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "ADMIN/NEW_SUPPLIERS_RAD"
+                  }
+                ]
+              },
+              {
+                "name" : "SUPPLIERCOUNTRY",
+                "fieldType" : "CONNECTOR",
+                "label" : "SUPPLIERCOUNTRY",
+                "nativeName" : "SUPPLIERCOUNTRY",
+                "nativeType" : "nvarchar",
+                "original" : "false",
+                "precision" : 512,
+                "scale" : 0,
+                "properties" : [
+                  {
+                    "name" : "parentObject",
+                    "value" : "ADMIN/NEW_SUPPLIERS_RAD"
+                  }
+                ]
+              }
+            ]
+          },
+          "readOptions" : {
+            "commandType" : 0,
+            "descending" : "false",
+            "queryAll" : "false",
+            "rowLimit" : 0,
+            "selectDistinct" : "false"
+          }
+        }
+      },
+      {
+        "createTime" : "2025-08-25T21:30:28.490Z",
+        "name" : "Target2",
+        "advancedProperties" : [
+          {
+            "name" : "Forward Rejected Rows",
+            "value" : "true"
+          }
+        ],
+        "groups" : [
+          {
+            "input" : "true",
+            "name" : "DefaultGroup",
+            "output" : "false",
+            "rules" : [
+              {
+                "bulkRename" : "false",
+                "include" : "true"
+              }
+            ]
+          }
+        ],
+        "createTarget" : "true",
+        "fieldMappingMode" : "BY_NAME",
+        "inputSorted" : "false",
+        "schemaProviderType" : "SELECTED_OBJECT",
+        "targetFieldsOrdered" : "false",
+        "updateColumns" : null,
+        "useLabels" : "false",
+        "useSequenceFields" : "false",
+        "dataAdapter" : {
+          "connectionId" : "saas:@fK7dS9WxpwifwaD1lHmxi0",
+          "connectionName" : "AzureSQL for CDI",
+          "excludeDynamicFileNameField" : "false",
+          "objectType" : "SINGLE",
+          "typeSystem" : "SqlServer",
+          "useDynamicFileName" : "false",
+          "bulkOptions" : {
+            "hardDelete" : "false",
+            "maxRowsPerRequest" : 0,
+            "monitorBulk" : "false",
+            "monitorBulkV2" : "false",
+            "pkChunkingEnabled" : "false",
+            "pkChunkingSize" : 0,
+            "serialMode" : "false",
+            "useBulkApi" : "false",
+            "useBulkApiV2" : "false"
+          },
+          "object" : {
+            "name" : "Sales/Suppliers",
+            "dbSchema" : "Sales",
+            "label" : "Suppliers",
+            "path" : "Sales/Suppliers",
+            "retainMetadata" : "false"
+          },
+          "writeOptions" : {
+            "batchSize" : 0,
+            "bulkApi" : "false",
+            "handleDecimalRoundOff" : "false",
+            "handleSpecialChars" : "false",
+            "operations" : [
+              "Insert"
+            ],
+            "setFieldsToNull" : "false",
+            "truncate" : "true",
+            "useErrorFile" : "false",
+            "useExactSrcNames" : "false",
+            "useSuccessFile" : "false"
+          }
+        }
+      }
+    ]
+  },
+  "vcsExportTime" : "2025-09-09 17:00:41 PDT"
+}

@@ -1,0 +1,133 @@
+{
+  "common" : {
+    "sourceConnectionId" : "010VEL0B00000000000F",
+    "targetConnectionId" : "010VEL0B00000000000U",
+    "taskMode" : "CDC_COMBINED",
+    "schedulerId" : "",
+    "runtimeSettings" : {
+      "latency" : 10,
+      "targetSchemaCreationMode" : "CREATE_TARGET",
+      "directoryPerTable" : false,
+      "targetEncodingFormat" : "CSV",
+      "enableAuditColumns" : false,
+      "rowsPerTargetFile" : 10000,
+      "kafkaTargetAttributes" : {
+        "topicPerTable" : false,
+        "topicName" : null,
+        "tablePrefix" : null,
+        "tableSuffix" : null,
+        "includeSchemaName" : false,
+        "asyncWrite" : true,
+        "alternateSerializer" : false,
+        "kafkaProducerProps" : null
+      },
+      "avroTargetAttributes" : null,
+      "avroAsParquetRequested" : false,
+      "parquetTargetAttributes" : null,
+      "snowflakeTargetAttributes" : {
+        "stage" : "rad_cdc"
+      },
+      "cdcCompatibleFormat" : false,
+      "cdcStartPoint" : {
+        "type" : "LATEST",
+        "value" : null
+      },
+      "targetCompressionType" : "NONE",
+      "useV2NamingConventions" : true,
+      "sourcePropsMap" : {
+        "loadType" : "CDC_COMBINED",
+        "journalName" : "",
+        "lobsEnabled" : "false",
+        "selectionMode" : "BROWSE_BASED",
+        "dbmi.cdc.technique" : "CDC_TABLES",
+        "dbmi.cdc.interval.days" : "0",
+        "dbmi.cdc.interval.mins" : "5",
+        "readerInputIsPersisted" : "false",
+        "dbmi.cdc.interval.hours" : "0",
+        "dbmi.cdc.query.based.column.type" : "COLUMN_TYPE_TIMESTAMP",
+        "unload.enable.source.partitioning" : "false",
+        "pwx.cdcreader.postgresql.connection.repl.slotname" : "",
+        "pwx.cdcreader.postgresql.connection.repl.publication" : ""
+      },
+      "targetPropsMap" : {
+        "applyMode" : "standard",
+        "targetBucket" : "",
+        "auditColumnsPrefix" : "INFA_",
+        "rat.audit.columns.opseq" : "false",
+        "formatEncoderPrintHeader" : "false",
+        "rat.audit.columns.optime" : "false",
+        "rat.audit.columns.optxid" : "false",
+        "rat.audit.columns.optype" : "false",
+        "rat.audit.columns.opowner" : "false",
+        "rat.target.columns.cycleId" : "true",
+        "writerSnowflakeIngestionMethod" : "",
+        "rat.cdcfile.target.tag.directories" : "false",
+        "writerSnowflakeDeferredMergeInterval" : "3600",
+        "rat.target.columns.last.replicated.time" : "true",
+        "targetIdentifiersEnableCaseTransformation" : "false"
+      },
+      "runtimePropsMap" : {
+        "writerRecoveryEnableCycleUpdates" : "true"
+      },
+      "historyManagerSettings" : null
+    },
+    "runtimeEnvId" : "010VEL25000000000002",
+    "taskCreationSource" : null,
+    "cdcGroupInmdtStrgConfig" : {
+      "cdcGroupTaskId" : "",
+      "cdcGroupTaskName" : ""
+    }
+  },
+  "replicationRules" : {
+    "source" : "Sales",
+    "target" : "PUBLIC",
+    "overrides" : {
+      "tableRules" : [ {
+        "source" : "*",
+        "target" : "RAD_*"
+      } ],
+      "fieldRules" : [ ]
+    },
+    "sourceSet" : [ {
+      "op" : "+",
+      "pattern" : "*",
+      "fieldsSet" : [ ],
+      "schema" : ""
+    }, {
+      "op" : "-",
+      "pattern" : "Suppliers",
+      "fieldsSet" : [ ],
+      "schema" : ""
+    }, {
+      "op" : "-",
+      "pattern" : "Products",
+      "fieldsSet" : [ ],
+      "schema" : ""
+    }, {
+      "op" : "-",
+      "pattern" : "Orders",
+      "fieldsSet" : [ ],
+      "schema" : ""
+    } ],
+    "schemaChangeHandlingOptions" : [ {
+      "pattern" : "*",
+      "changetypes" : [ {
+        "op" : "ADD_COLUMN",
+        "action" : "REPLICATE"
+      }, {
+        "op" : "MODIFY_COLUMN",
+        "action" : "REPLICATE"
+      }, {
+        "op" : "DROP_COLUMN",
+        "action" : "REPLICATE"
+      }, {
+        "op" : "RENAME_COLUMN",
+        "action" : "REPLICATE"
+      } ]
+    } ],
+    "columnTransformations" : [ ]
+  },
+  "datatypeChangeRules" : [ ],
+  "dataFilterConditions" : [ ],
+  "version" : 26
+}

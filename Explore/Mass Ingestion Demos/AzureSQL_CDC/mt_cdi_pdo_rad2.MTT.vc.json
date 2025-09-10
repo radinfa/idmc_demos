@@ -1,0 +1,398 @@
+{
+  "name" : "mt_cdi_pdo_rad2",
+  "runtimeEnvironmentId" : "@9MF0qhU2GsVjTG4vIrc268",
+  "runtimeEnvironmentName" : "MDM_Integration-Runtime",
+  "maxLogs" : 10,
+  "parameters" : [
+    {
+      "name" : "$Src_Customers_Sflk$",
+      "type" : "EXTENDED_SOURCE",
+      "label" : "Src_Customers_Sflk",
+      "uiProperties" : {
+        "connectionParameterized" : "false",
+        "isSelectDistinct" : "false",
+        "isMsrcFilterParameterized" : "false",
+        "isMsrcSortParameterized" : "false",
+        "objectParameterized" : "false",
+        "visible" : "false",
+        "originalPath" : "Src_Customers_Sflk"
+      },
+      "sourceConnectionId" : "@8RvqGoHyhvniQWk7Wazgkc",
+      "connectionName" : "Snowflake_retail_cpg",
+      "newFlatFile" : false,
+      "newObject" : false,
+      "showBusinessNames" : false,
+      "naturalOrder" : true,
+      "truncateTarget" : false,
+      "bulkApiDBTarget" : false,
+      "customFuncCfg" : { },
+      "extendedObject" : {
+        "object" : {
+          "name" : "RETAIL_CPG/PUBLIC/RAD_Customers",
+          "label" : "RETAIL_CPG/PUBLIC/RAD_Customers",
+          "metadataUpdated" : false
+        },
+        "singleMode" : true,
+        "objects" : [
+          {
+            "name" : "RETAIL_CPG/PUBLIC/RAD_Customers",
+            "label" : "RETAIL_CPG/PUBLIC/RAD_Customers",
+            "metadataUpdated" : false
+          }
+        ]
+      },
+      "commandType" : 0,
+      "handleSpecialChars" : false,
+      "handleDecimalRoundOff" : false,
+      "frsAsset" : false,
+      "dynamicFileName" : false,
+      "excludeDynamicFileNameField" : false,
+      "currentlyProcessedFileName" : false,
+      "retainFieldMetadata" : false,
+      "useExactSrcNames" : false,
+      "userUpdated" : true,
+      "runtimeParameterData" : {
+        "connectionRuntimeParameter" : false,
+        "objectRuntimeParameter" : false
+      },
+      "restmodernSource" : true,
+      "unspecified" : false,
+      "fileList" : false
+    },
+    {
+      "name" : "$Src_Orders_Sflk$",
+      "type" : "EXTENDED_SOURCE",
+      "label" : "Src_Orders_Sflk",
+      "uiProperties" : {
+        "connectionParameterized" : "false",
+        "isSelectDistinct" : "false",
+        "isMsrcFilterParameterized" : "false",
+        "isMsrcSortParameterized" : "false",
+        "objectParameterized" : "false",
+        "visible" : "false",
+        "originalPath" : "Src_Orders_Sflk"
+      },
+      "sourceConnectionId" : "@8RvqGoHyhvniQWk7Wazgkc",
+      "connectionName" : "Snowflake_retail_cpg",
+      "newFlatFile" : false,
+      "newObject" : false,
+      "showBusinessNames" : false,
+      "naturalOrder" : true,
+      "truncateTarget" : false,
+      "bulkApiDBTarget" : false,
+      "customFuncCfg" : { },
+      "extendedObject" : {
+        "object" : {
+          "name" : "RETAIL_CPG/PUBLIC/RAD_Orders",
+          "label" : "RETAIL_CPG/PUBLIC/RAD_Orders",
+          "metadataUpdated" : false
+        },
+        "singleMode" : true,
+        "objects" : [
+          {
+            "name" : "RETAIL_CPG/PUBLIC/RAD_Orders",
+            "label" : "RETAIL_CPG/PUBLIC/RAD_Orders",
+            "metadataUpdated" : false
+          }
+        ]
+      },
+      "commandType" : 0,
+      "handleSpecialChars" : false,
+      "handleDecimalRoundOff" : false,
+      "frsAsset" : false,
+      "dynamicFileName" : false,
+      "excludeDynamicFileNameField" : false,
+      "currentlyProcessedFileName" : false,
+      "retainFieldMetadata" : false,
+      "useExactSrcNames" : false,
+      "userUpdated" : true,
+      "runtimeParameterData" : {
+        "connectionRuntimeParameter" : false,
+        "objectRuntimeParameter" : false
+      },
+      "restmodernSource" : true,
+      "unspecified" : false,
+      "fileList" : false
+    },
+    {
+      "name" : "$Src_Suppliers_Sflk$",
+      "type" : "EXTENDED_SOURCE",
+      "label" : "Src_Suppliers_Sflk",
+      "uiProperties" : {
+        "connectionParameterized" : "false",
+        "isSelectDistinct" : "false",
+        "isMsrcFilterParameterized" : "false",
+        "isMsrcSortParameterized" : "false",
+        "objectParameterized" : "false",
+        "visible" : "false",
+        "originalPath" : "Src_Suppliers_Sflk"
+      },
+      "sourceConnectionId" : "@8RvqGoHyhvniQWk7Wazgkc",
+      "connectionName" : "Snowflake_retail_cpg",
+      "newFlatFile" : false,
+      "newObject" : false,
+      "showBusinessNames" : false,
+      "naturalOrder" : true,
+      "truncateTarget" : false,
+      "bulkApiDBTarget" : false,
+      "customFuncCfg" : { },
+      "extendedObject" : {
+        "object" : {
+          "name" : "RETAIL_CPG/PUBLIC/RAD_Suppliers",
+          "label" : "RETAIL_CPG/PUBLIC/RAD_Suppliers",
+          "metadataUpdated" : false
+        },
+        "singleMode" : true,
+        "objects" : [
+          {
+            "name" : "RETAIL_CPG/PUBLIC/RAD_Suppliers",
+            "label" : "RETAIL_CPG/PUBLIC/RAD_Suppliers",
+            "metadataUpdated" : false
+          }
+        ]
+      },
+      "commandType" : 0,
+      "handleSpecialChars" : false,
+      "handleDecimalRoundOff" : false,
+      "frsAsset" : false,
+      "dynamicFileName" : false,
+      "excludeDynamicFileNameField" : false,
+      "currentlyProcessedFileName" : false,
+      "retainFieldMetadata" : false,
+      "useExactSrcNames" : false,
+      "userUpdated" : true,
+      "runtimeParameterData" : {
+        "connectionRuntimeParameter" : false,
+        "objectRuntimeParameter" : false
+      },
+      "restmodernSource" : true,
+      "unspecified" : false,
+      "fileList" : false
+    },
+    {
+      "name" : "$Src_products_Sflk$",
+      "type" : "EXTENDED_SOURCE",
+      "label" : "Src_products_Sflk",
+      "uiProperties" : {
+        "connectionParameterized" : "false",
+        "isSelectDistinct" : "false",
+        "isMsrcFilterParameterized" : "false",
+        "isMsrcSortParameterized" : "false",
+        "objectParameterized" : "false",
+        "visible" : "false",
+        "originalPath" : "Src_products_Sflk"
+      },
+      "sourceConnectionId" : "@8RvqGoHyhvniQWk7Wazgkc",
+      "connectionName" : "Snowflake_retail_cpg",
+      "newFlatFile" : false,
+      "newObject" : false,
+      "showBusinessNames" : false,
+      "naturalOrder" : true,
+      "truncateTarget" : false,
+      "bulkApiDBTarget" : false,
+      "customFuncCfg" : { },
+      "extendedObject" : {
+        "object" : {
+          "name" : "RETAIL_CPG/PUBLIC/RAD_Products",
+          "label" : "RETAIL_CPG/PUBLIC/RAD_Products",
+          "metadataUpdated" : false
+        },
+        "singleMode" : true,
+        "objects" : [
+          {
+            "name" : "RETAIL_CPG/PUBLIC/RAD_Products",
+            "label" : "RETAIL_CPG/PUBLIC/RAD_Products",
+            "metadataUpdated" : false
+          }
+        ]
+      },
+      "commandType" : 0,
+      "handleSpecialChars" : false,
+      "handleDecimalRoundOff" : false,
+      "frsAsset" : false,
+      "dynamicFileName" : false,
+      "excludeDynamicFileNameField" : false,
+      "currentlyProcessedFileName" : false,
+      "retainFieldMetadata" : false,
+      "useExactSrcNames" : false,
+      "userUpdated" : true,
+      "runtimeParameterData" : {
+        "connectionRuntimeParameter" : false,
+        "objectRuntimeParameter" : false
+      },
+      "restmodernSource" : true,
+      "unspecified" : false,
+      "fileList" : false
+    },
+    {
+      "name" : "$Tgt_Customer_Revenue_Rank_Snowflake2$",
+      "type" : "TARGET",
+      "label" : "Tgt_Customer_Revenue_Rank_Snowflake2",
+      "uiProperties" : {
+        "connectionParameterized" : "false",
+        "objectParameterized" : "false",
+        "visible" : "false",
+        "supportApplyDDLChanges" : "true",
+        "originalPath" : "Tgt_Customer_Revenue_Rank_Snowflake2"
+      },
+      "targetConnectionId" : "@8RvqGoHyhvniQWk7Wazgkc",
+      "connectionName" : "Snowflake_retail_cpg",
+      "targetObject" : "RETAIL_CPG/PUBLIC/DEMO_CDC_TOT_CUST_REVENUE_RAD",
+      "targetObjectLabel" : "RETAIL_CPG/PUBLIC/DEMO_CDC_TOT_CUST_REVENUE_RAD",
+      "newFlatFile" : false,
+      "newObject" : true,
+      "showBusinessNames" : false,
+      "naturalOrder" : true,
+      "newObjectName" : "RETAIL_CPG/PUBLIC/DEMO_CDC_TOT_CUST_REVENUE_RAD",
+      "truncateTarget" : false,
+      "bulkApiDBTarget" : false,
+      "operationType" : "Insert",
+      "customFuncCfg" : { },
+      "extendedObject" : {
+        "singleMode" : true
+      },
+      "commandType" : 0,
+      "handleSpecialChars" : false,
+      "handleDecimalRoundOff" : false,
+      "frsAsset" : false,
+      "dynamicFileName" : false,
+      "excludeDynamicFileNameField" : false,
+      "currentlyProcessedFileName" : false,
+      "retainFieldMetadata" : false,
+      "objectName" : "RETAIL_CPG/PUBLIC/DEMO_CDC_TOT_CUST_REVENUE_RAD",
+      "objectLabel" : "RETAIL_CPG/PUBLIC/DEMO_CDC_TOT_CUST_REVENUE_RAD",
+      "useExactSrcNames" : false,
+      "userUpdated" : true,
+      "tgtObjectAttributes" : {
+        "parent" : "RETAIL_CPG/PUBLIC",
+        "tableFormat" : "Standard Table"
+      },
+      "runtimeParameterData" : {
+        "connectionRuntimeParameter" : false,
+        "objectRuntimeParameter" : false
+      },
+      "restmodernSource" : true,
+      "unspecified" : false,
+      "fileList" : false
+    },
+    {
+      "name" : "$Tgt_Prod_Revenue_Snowflake$",
+      "type" : "TARGET",
+      "label" : "Tgt_Prod_Revenue_Snowflake",
+      "uiProperties" : {
+        "connectionParameterized" : "false",
+        "objectParameterized" : "false",
+        "visible" : "false",
+        "supportApplyDDLChanges" : "true",
+        "originalPath" : "Tgt_Prod_Revenue_Snowflake"
+      },
+      "targetConnectionId" : "@8RvqGoHyhvniQWk7Wazgkc",
+      "connectionName" : "Snowflake_retail_cpg",
+      "targetObject" : "RETAIL_CPG/PUBLIC/DEMO_CDC_TOT_PROD_REVENUE_RAD",
+      "targetObjectLabel" : "RETAIL_CPG/PUBLIC/DEMO_CDC_TOT_PROD_REVENUE_RAD",
+      "newFlatFile" : false,
+      "newObject" : true,
+      "showBusinessNames" : false,
+      "naturalOrder" : true,
+      "newObjectName" : "RETAIL_CPG/PUBLIC/DEMO_CDC_TOT_PROD_REVENUE_RAD",
+      "truncateTarget" : false,
+      "bulkApiDBTarget" : false,
+      "operationType" : "Insert",
+      "customFuncCfg" : { },
+      "extendedObject" : {
+        "singleMode" : true
+      },
+      "commandType" : 0,
+      "handleSpecialChars" : false,
+      "handleDecimalRoundOff" : false,
+      "frsAsset" : false,
+      "dynamicFileName" : false,
+      "excludeDynamicFileNameField" : false,
+      "currentlyProcessedFileName" : false,
+      "retainFieldMetadata" : false,
+      "objectName" : "RETAIL_CPG/PUBLIC/DEMO_CDC_TOT_PROD_REVENUE_RAD",
+      "objectLabel" : "RETAIL_CPG/PUBLIC/DEMO_CDC_TOT_PROD_REVENUE_RAD",
+      "useExactSrcNames" : false,
+      "userUpdated" : true,
+      "tgtObjectAttributes" : {
+        "parent" : "RETAIL_CPG/PUBLIC",
+        "tableFormat" : "Standard Table"
+      },
+      "runtimeParameterData" : {
+        "connectionRuntimeParameter" : false,
+        "objectRuntimeParameter" : false
+      },
+      "restmodernSource" : true,
+      "unspecified" : false,
+      "fileList" : false
+    },
+    {
+      "name" : "$Tgt_Supp_Revenue_Snowflake$",
+      "type" : "TARGET",
+      "label" : "Tgt_Supp_Revenue_Snowflake",
+      "uiProperties" : {
+        "connectionParameterized" : "false",
+        "objectParameterized" : "false",
+        "visible" : "false",
+        "supportApplyDDLChanges" : "true",
+        "originalPath" : "Tgt_Supp_Revenue_Snowflake"
+      },
+      "targetConnectionId" : "@8RvqGoHyhvniQWk7Wazgkc",
+      "connectionName" : "Snowflake_retail_cpg",
+      "targetObject" : "RETAIL_CPG/PUBLIC/DEMO_CDC_TOT_SUPPL_REVENUE_RAD",
+      "targetObjectLabel" : "RETAIL_CPG/PUBLIC/DEMO_CDC_TOT_SUPPL_REVENUE_RAD",
+      "newFlatFile" : false,
+      "newObject" : true,
+      "showBusinessNames" : false,
+      "naturalOrder" : true,
+      "newObjectName" : "RETAIL_CPG/PUBLIC/DEMO_CDC_TOT_SUPPL_REVENUE_RAD",
+      "truncateTarget" : false,
+      "bulkApiDBTarget" : false,
+      "operationType" : "Insert",
+      "customFuncCfg" : { },
+      "extendedObject" : {
+        "singleMode" : true
+      },
+      "commandType" : 0,
+      "handleSpecialChars" : false,
+      "handleDecimalRoundOff" : false,
+      "frsAsset" : false,
+      "dynamicFileName" : false,
+      "excludeDynamicFileNameField" : false,
+      "currentlyProcessedFileName" : false,
+      "retainFieldMetadata" : false,
+      "objectName" : "RETAIL_CPG/PUBLIC/DEMO_CDC_TOT_SUPPL_REVENUE_RAD",
+      "objectLabel" : "RETAIL_CPG/PUBLIC/DEMO_CDC_TOT_SUPPL_REVENUE_RAD",
+      "useExactSrcNames" : false,
+      "userUpdated" : true,
+      "tgtObjectAttributes" : {
+        "parent" : "RETAIL_CPG/PUBLIC",
+        "tableFormat" : "Standard Table"
+      },
+      "runtimeParameterData" : {
+        "connectionRuntimeParameter" : false,
+        "objectRuntimeParameter" : false
+      },
+      "restmodernSource" : true,
+      "unspecified" : false,
+      "fileList" : false
+    }
+  ],
+  "verbose" : false,
+  "lastRunTime" : 1757306325000,
+  "mappingId" : "@2yreGiRY6EVbC3Yh4nwwuC",
+  "mappingTemplateName" : "m_cdi_pdo_rad2",
+  "hidden" : false,
+  "enableCrossSchemaPushdown" : true,
+  "enableParallelRun" : false,
+  "autoTunedApplied" : false,
+  "autoTunedAppliedType" : "NONE",
+  "schemaMode" : "async",
+  "executionEngine" : "ECOSYSTEM",
+  "valid" : true,
+  "optimizationPlan" : "NONE",
+  "allowMaxFieldLength" : false,
+  "specialCharacterSupport" : false,
+  "midstreamPreview" : false,
+  "vcsExportTime" : "2025-09-09 17:00:42 PDT"
+}
