@@ -1,0 +1,47 @@
+{
+  "objectInfo" : {
+    "id" : "lYstm12gKwoeRY9H7fkWsk",
+    "name" : "Profile__TKV112_CHILDREN_CLEANSED",
+    "type" : "PROFILE",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 1,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "11ff3878-c1bc-4473-9b0a-5840f7224c5f"
+      },
+      "contextAttributes" : [ ],
+      "additionalInfo" : {
+        "description" : null,
+        "contentType" : "Binary",
+        "documentState" : "VALID"
+      }
+    }
+  },
+  "dataFileExtension" : "json",
+  "updateTime" : "2026-01-15T19:34:01.868Z",
+  "objectRefs" : [ {
+    "id" : "aBFly3DJh5ecR0zoC5UraR",
+    "name" : "RETAIL_CPG_Snowflake",
+    "type" : "Connection",
+    "metadata" : {
+      "modelVersion" : {
+        "major" : 0,
+        "minor" : 0
+      },
+      "repoInfo" : {
+        "repoHandle" : "010VEL0B00000000000Q"
+      },
+      "contextAttributes" : null,
+      "additionalInfo" : {
+        "description" : "Connections to the Retail CPG Schemas",
+        "contentType" : "JSON",
+        "documentState" : "COMPLETE"
+      }
+    },
+    "path" : "/SYS"
+  } ],
+  "readableFileExtension" : null,
+  "readableFilePresent" : false
+}
